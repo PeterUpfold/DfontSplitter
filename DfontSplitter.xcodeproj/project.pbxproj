@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D087A550219567B2003C24DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087A54F219567B2003C24DA /* AppDelegate.swift */; };
+		D087A552219567B2003C24DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087A551219567B2003C24DA /* ViewController.swift */; };
+		D087A554219567B4003C24DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D087A553219567B4003C24DA /* Assets.xcassets */; };
+		D087A557219567B4003C24DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D087A555219567B4003C24DA /* Main.storyboard */; };
+		D087A563219567B4003C24DA /* DfontSplitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087A562219567B4003C24DA /* DfontSplitterTests.swift */; };
+		D087A56E219567B4003C24DA /* DfontSplitterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087A56D219567B4003C24DA /* DfontSplitterUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D087A55F219567B4003C24DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D087A544219567B2003C24DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D087A54B219567B2003C24DA;
+			remoteInfo = DfontSplitter;
+		};
+		D087A56A219567B4003C24DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D087A544219567B2003C24DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D087A54B219567B2003C24DA;
+			remoteInfo = DfontSplitter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D087A54C219567B2003C24DA /* DfontSplitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DfontSplitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D087A54F219567B2003C24DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D087A551219567B2003C24DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D087A553219567B4003C24DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D087A556219567B4003C24DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D087A558219567B4003C24DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D087A559219567B4003C24DA /* DfontSplitter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DfontSplitter.entitlements; sourceTree = "<group>"; };
+		D087A55E219567B4003C24DA /* DfontSplitterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DfontSplitterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D087A562219567B4003C24DA /* DfontSplitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DfontSplitterTests.swift; sourceTree = "<group>"; };
+		D087A564219567B4003C24DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D087A569219567B4003C24DA /* DfontSplitterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DfontSplitterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D087A56D219567B4003C24DA /* DfontSplitterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DfontSplitterUITests.swift; sourceTree = "<group>"; };
+		D087A56F219567B4003C24DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D087A549219567B2003C24DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D087A55B219567B4003C24DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D087A566219567B4003C24DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D087A543219567B2003C24DA = {
+			isa = PBXGroup;
+			children = (
+				D087A54E219567B2003C24DA /* DfontSplitter */,
+				D087A561219567B4003C24DA /* DfontSplitterTests */,
+				D087A56C219567B4003C24DA /* DfontSplitterUITests */,
+				D087A54D219567B2003C24DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D087A54D219567B2003C24DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D087A54C219567B2003C24DA /* DfontSplitter.app */,
+				D087A55E219567B4003C24DA /* DfontSplitterTests.xctest */,
+				D087A569219567B4003C24DA /* DfontSplitterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D087A54E219567B2003C24DA /* DfontSplitter */ = {
+			isa = PBXGroup;
+			children = (
+				D087A54F219567B2003C24DA /* AppDelegate.swift */,
+				D087A551219567B2003C24DA /* ViewController.swift */,
+				D087A553219567B4003C24DA /* Assets.xcassets */,
+				D087A555219567B4003C24DA /* Main.storyboard */,
+				D087A558219567B4003C24DA /* Info.plist */,
+				D087A559219567B4003C24DA /* DfontSplitter.entitlements */,
+			);
+			path = DfontSplitter;
+			sourceTree = "<group>";
+		};
+		D087A561219567B4003C24DA /* DfontSplitterTests */ = {
+			isa = PBXGroup;
+			children = (
+				D087A562219567B4003C24DA /* DfontSplitterTests.swift */,
+				D087A564219567B4003C24DA /* Info.plist */,
+			);
+			path = DfontSplitterTests;
+			sourceTree = "<group>";
+		};
+		D087A56C219567B4003C24DA /* DfontSplitterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D087A56D219567B4003C24DA /* DfontSplitterUITests.swift */,
+				D087A56F219567B4003C24DA /* Info.plist */,
+			);
+			path = DfontSplitterUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D087A54B219567B2003C24DA /* DfontSplitter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D087A572219567B4003C24DA /* Build configuration list for PBXNativeTarget "DfontSplitter" */;
+			buildPhases = (
+				D087A548219567B2003C24DA /* Sources */,
+				D087A549219567B2003C24DA /* Frameworks */,
+				D087A54A219567B2003C24DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DfontSplitter;
+			productName = DfontSplitter;
+			productReference = D087A54C219567B2003C24DA /* DfontSplitter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D087A55D219567B4003C24DA /* DfontSplitterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D087A575219567B4003C24DA /* Build configuration list for PBXNativeTarget "DfontSplitterTests" */;
+			buildPhases = (
+				D087A55A219567B4003C24DA /* Sources */,
+				D087A55B219567B4003C24DA /* Frameworks */,
+				D087A55C219567B4003C24DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D087A560219567B4003C24DA /* PBXTargetDependency */,
+			);
+			name = DfontSplitterTests;
+			productName = DfontSplitterTests;
+			productReference = D087A55E219567B4003C24DA /* DfontSplitterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D087A568219567B4003C24DA /* DfontSplitterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D087A578219567B4003C24DA /* Build configuration list for PBXNativeTarget "DfontSplitterUITests" */;
+			buildPhases = (
+				D087A565219567B4003C24DA /* Sources */,
+				D087A566219567B4003C24DA /* Frameworks */,
+				D087A567219567B4003C24DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D087A56B219567B4003C24DA /* PBXTargetDependency */,
+			);
+			name = DfontSplitterUITests;
+			productName = DfontSplitterUITests;
+			productReference = D087A569219567B4003C24DA /* DfontSplitterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D087A544219567B2003C24DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Peter Upfold";
+				TargetAttributes = {
+					D087A54B219567B2003C24DA = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					D087A55D219567B4003C24DA = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D087A54B219567B2003C24DA;
+					};
+					D087A568219567B4003C24DA = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D087A54B219567B2003C24DA;
+					};
+				};
+			};
+			buildConfigurationList = D087A547219567B2003C24DA /* Build configuration list for PBXProject "DfontSplitter" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D087A543219567B2003C24DA;
+			productRefGroup = D087A54D219567B2003C24DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D087A54B219567B2003C24DA /* DfontSplitter */,
+				D087A55D219567B4003C24DA /* DfontSplitterTests */,
+				D087A568219567B4003C24DA /* DfontSplitterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D087A54A219567B2003C24DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D087A554219567B4003C24DA /* Assets.xcassets in Resources */,
+				D087A557219567B4003C24DA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D087A55C219567B4003C24DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D087A567219567B4003C24DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D087A548219567B2003C24DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D087A552219567B2003C24DA /* ViewController.swift in Sources */,
+				D087A550219567B2003C24DA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D087A55A219567B4003C24DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D087A563219567B4003C24DA /* DfontSplitterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D087A565219567B4003C24DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D087A56E219567B4003C24DA /* DfontSplitterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D087A560219567B4003C24DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D087A54B219567B2003C24DA /* DfontSplitter */;
+			targetProxy = D087A55F219567B4003C24DA /* PBXContainerItemProxy */;
+		};
+		D087A56B219567B4003C24DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D087A54B219567B2003C24DA /* DfontSplitter */;
+			targetProxy = D087A56A219567B4003C24DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D087A555219567B4003C24DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D087A556219567B4003C24DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D087A570219567B4003C24DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D087A571219567B4003C24DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		D087A573219567B4003C24DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DfontSplitter/DfontSplitter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4P6R7ZH883;
+				INFOPLIST_FILE = DfontSplitter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.org.upfold.DfontSplitter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		D087A574219567B4003C24DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DfontSplitter/DfontSplitter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4P6R7ZH883;
+				INFOPLIST_FILE = DfontSplitter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.org.upfold.DfontSplitter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		D087A576219567B4003C24DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4P6R7ZH883;
+				INFOPLIST_FILE = DfontSplitterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.org.upfold.DfontSplitterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DfontSplitter.app/Contents/MacOS/DfontSplitter";
+			};
+			name = Debug;
+		};
+		D087A577219567B4003C24DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4P6R7ZH883;
+				INFOPLIST_FILE = DfontSplitterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.org.upfold.DfontSplitterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DfontSplitter.app/Contents/MacOS/DfontSplitter";
+			};
+			name = Release;
+		};
+		D087A579219567B4003C24DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4P6R7ZH883;
+				INFOPLIST_FILE = DfontSplitterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.org.upfold.DfontSplitterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = DfontSplitter;
+			};
+			name = Debug;
+		};
+		D087A57A219567B4003C24DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4P6R7ZH883;
+				INFOPLIST_FILE = DfontSplitterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.org.upfold.DfontSplitterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = DfontSplitter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D087A547219567B2003C24DA /* Build configuration list for PBXProject "DfontSplitter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D087A570219567B4003C24DA /* Debug */,
+				D087A571219567B4003C24DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D087A572219567B4003C24DA /* Build configuration list for PBXNativeTarget "DfontSplitter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D087A573219567B4003C24DA /* Debug */,
+				D087A574219567B4003C24DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D087A575219567B4003C24DA /* Build configuration list for PBXNativeTarget "DfontSplitterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D087A576219567B4003C24DA /* Debug */,
+				D087A577219567B4003C24DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D087A578219567B4003C24DA /* Build configuration list for PBXNativeTarget "DfontSplitterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D087A579219567B4003C24DA /* Debug */,
+				D087A57A219567B4003C24DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D087A544219567B2003C24DA /* Project object */;
+}
