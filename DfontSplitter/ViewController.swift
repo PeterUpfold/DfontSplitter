@@ -22,6 +22,10 @@ class ViewController: NSViewController {
         }
     }
 
-
+    @IBAction func convertButton(_ sender: Any) {
+        
+    }
+    @IBOutlet weak var fontTableView: NSTableView!
+    
 }
 
