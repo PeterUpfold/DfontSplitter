@@ -22,8 +22,11 @@ class ViewController: NSViewController {
         }
     }
     
-    @objc func acceptFilenameDrag(filename: NSString) {
-        print(filename)
+    @objc func acceptFilenameDrag(file: NSPasteboardItem) {
+        let fileName = URL(string: file.string(forType: NSPasteboard.PasteboardType.fileURL) ?? "")?.absoluteString
+        debugPrint(fileName!)
+        
+        
     }
 
     @IBAction func convertButton(_ sender: Any) {

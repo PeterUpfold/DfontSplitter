@@ -41,13 +41,11 @@ class DragDropTableView: NSTableView {
     
     override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
         let pasteboard = sender.draggingPasteboard
-        let filenames = pasteboard.propertyList(forType: NSPasteboard.PasteboardType.fileURL)
-        if (pasteboard.types!.contains(NSPasteboard.PasteboardType.fileURL) && delegate!.responds(to: "acceptFilenameDrag")) {
-            if let filenameList = filenames as? NSArray
-            {
-                for file in filenameList {
-                    delegate!.perform("acceptFilenameDrag", with: file)
-                }
+        let filenames = pasteboard.pasteboardItems
+        if (pasteboard.types!.contains(NSPasteboard.PasteboardType.fileURL) && delegate!.responds(to: #selector(ViewController.acceptFilenameDrag))) {
+
+            for file in filenames! {
+                delegate!.perform(#selector(ViewController.acceptFilenameDrag), with: file)
             }
             return true
         }
