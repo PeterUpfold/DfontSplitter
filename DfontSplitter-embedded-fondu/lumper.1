@@ -1,0 +1,62 @@
+.TH LUMPER 1 "3 Febuary 2004"
+.SH NAME
+lumper \- lump a bunch of mac font resources into the same file
+.SH SYNOPSIS
+.B lumper
+.BR  font1.dfont
+.BR  font2.dfont
+.BR  ...
+.SH DESCRIPTION
+The program
+.B lumper
+adds  to  the  file  font1.dfont all the mac font
+resources ('sfnt', 'FOND', 'NFNT') found in the subsequent  files.   If
+there  are any resource id conflicts it will generate a new resource id
+(and fix up any references to that id in the 'FOND' resources).
+.LP
+The first file should be a mac .dfont file, subsequent  files  may  be
+macbinary  files  (.bin),  binhex files (.hqx), bare Macintosh resource
+forks, or data fork resource files (.dfont, as used  by  MacOS  X).
+.LP
+The  mac 'FOND' resource is somewhat limited in the styles permitted in
+a mac font family. Now-a-days a mac font family seems to come in a sin-
+gle file with those fonts that fit into a traditional mac family in one
+FOND and several other FONDs to accomidate the other styles.   Thus  if
+you have the styles:
+.br
+.in +2n
+ Regular, Bold, Italic, BoldItalic, Condensed, Oblique, Light, LightItalic
+.in -2n
+.br
+for a font "Foo", you might find a file called Foo.dfont containing the
+following FONDs:
+.in +4n
+.ti -2n
+.br
+Foo
+.br
+Regular
+.br
+Bold
+.br
+Italic
+.br
+BoldItalic
+.br
+Condensed
+.br
+.ti -2n
+FooOblique
+.br
+Oblique
+.br
+.ti -2n
+FooLight
+.br
+Light
+.br
+LightItalic
+.in -4n
+.SH AUTHOR
+George Williams (gww@silcom.com).
+.\" end of manual page

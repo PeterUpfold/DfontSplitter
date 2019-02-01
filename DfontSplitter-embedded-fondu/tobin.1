@@ -1,0 +1,36 @@
+.TH FROMBIN 1 "21 December 2002"
+.SH NAME
+tobin \- convert a series of files into a series of macbinary files
+.SH SYNOPSIS
+.B tobin
+.RB [ \-res filename ]
+.RB [ \-type 4-character-string ]
+.RB [ \-creator 4-character-string ]
+.BR file ...
+.SH DESCRIPTION
+The program
+.B tobin
+reads a series of files and wraps them up in a macbinary wrapper.
+On the mac it read the resource fork and file create/type flags from the
+filesystem (as one would expect).
+On non-mac systems (where these concepts do not exist) you may specify these
+on the command line with options.
+.SH OPTIONS
+.TP
+.B \-res filename 
+Specify the name of a file from which a "resource fork" should be read. This argument should
+precede the data file with which it is associated (if you want a file with no
+data fork, you may omit the data file).
+.TP
+.B \-type 4-character-string
+Specify the a mac 4 character type string used to tell the finder what kind of
+file it is. This argument should
+precede the data or resource file with which it is associated.
+.TP
+.B \-creator 4-character-string
+Specify the a mac 4 character type string used to tell the finder what application
+is associated with this file. This argument should
+precede the data or resource file with which it is associated.
+.SH AUTHOR
+George Williams (gww@silcom.com).
+.\" end of manual page

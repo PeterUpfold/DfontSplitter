@@ -1,0 +1,67 @@
+.TH FONDU 1 "27 May 2004"
+.SH NAME
+fondu \- convert Macintosh font files to UNIX font format
+.SH SYNOPSIS
+.B fondu
+.RB [ \-force ]
+.RB [ \-inquire ]
+.RB [ \-show ]
+.RB [ \-latin1 ]
+.RB [ \-afm ]
+.RB [ \-trackps ]
+.BR  macfile ...
+.SH DESCRIPTION
+The program
+.B fondu
+reads a series of Macintosh font files,
+checks their resource forks,
+and extracts all font related items into separate files.
+.LP
+Input files may be either macbinary files (.bin),
+binhex files (.hqx), 
+bare Macintosh resource forks,
+or data fork resource files (.dfont, as used by MacOS X).
+A bare resource fork may be generated easily be copying a file with a resource 
+fork onto a diskette (or zip drive) using DOS format. 
+\." how to do this, explicitly?
+The Macintosh will create a folder called resource.frk
+(invisible on the Macintosh itself),
+in which the resource fork will reside as a bare file.
+.LP
+The command line should end with a list of one or more Macintosh font files,
+.BR macfile ...;
+these files should be macbinary (.bin), binhex(.hqx),
+or bare resource fork files.
+.SH OPTIONS
+.TP
+.B \-force 
+Force overwriting of the original file.
+.TP
+.B \-inquire 
+Prompt for input before overwriting files. This overrides -force.
+.TP
+.B \-show 
+Print out each file as it is created.
+.TP
+.BI \-latin1
+Recode any macintosh bitmap fonts (NFNTs) from the macintosh roman encoding to latin1.
+.TP
+.BI \-trackps
+If the macfiles argument mentions a file containing a FOND, and that FOND
+mentions external PostScript resource files, then attempt to open those
+PostScript files as well as processing the original file.
+.TP
+.B \-afm 
+For any macfile which contains a FOND and points to at least one PostScript
+resource file create an Adobe Font Metrics (afm) file. Fondu will merge
+width and bounding box information from the PostScript files, and kerning
+data from the FOND.
+.SH AUTHOR
+George Williams (gww@silcom.com).
+.LP
+Manual page by
+Ziying Sherwin (sherwin@nlm.nih.gov) and
+R.P.C Rodgers (rodgers@nlm.nih.gov),
+Lister Hill National Center for Biomedical Communications,
+U.S. National Library of Medicine.
+.\" end of manual page

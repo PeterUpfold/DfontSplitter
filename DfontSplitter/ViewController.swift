@@ -21,10 +21,15 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
+    
+    @objc func acceptFilenameDrag(filename: NSString) {
+        print(filename)
+    }
 
     @IBAction func convertButton(_ sender: Any) {
         
     }
+    
     @IBOutlet weak var fontTableView: NSTableView!
     
 }

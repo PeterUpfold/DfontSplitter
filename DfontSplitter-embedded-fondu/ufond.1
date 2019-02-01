@@ -1,0 +1,73 @@
+.ds Ps P\s-2OST\s+2S\s-2CRIPT\s+2
+.TH UFOND 1 "23 October 2002"
+.SH NAME
+ufond \-  convert UNIX font files into Macintosh format
+.SH SYNOPSIS
+.B ufond
+.RB [ \-dfont ]
+.RB [ \-macbin ]
+.RB [ \-res ]
+.RB [ \-script 
+.IR name ]
+.BR  fontfile ...
+.SH DESCRIPTION
+The program
+.B ufond
+takes UNIX font files,
+wraps them in a Macintosh resource fork,
+creates a family for them,
+and then wraps that in a macbinary or binhex file. 
+.LP
+The program reads one or more font files,
+specified at the end of the command line, 
+using any of the following formats:
+.TP
+Glyph Bitmap Distribution (.bdf)
+.TP
+TrueType (.ttf)
+.TP
+OpenType (.otf)
+.TP
+\*(Ps Binary format (.pfb)
+.LP
+All fonts with the same font family name will be placed in the same FOND. 
+The program associates the name of a \*(Ps font with a bitmap font, 
+as well as handling bold, italic, and other variants properly.
+.LP
+The generated Macintosh files will be in one of three formats:
+.TP
+MacBinary (default)
+.TP
+dfont (data fork resource file format, used by MacOS X) 
+.TP
+bare resource fork (you have to know how to transform this into a real resource fork)
+.LP
+The program normally assumes that your fonts are in the roman script system. 
+If this is not true you may specify a script directly. 
+The program knows the names of a few scripts
+(greek, cyrillic, hebrew, arabic) 
+which may be entered directly;
+otherwise you must know the Macintosh script number. 
+.\" more information about Macintosh scripts is important here
+.SH OPTIONS
+.TP
+.B \-dfont 
+Generate Macintosh files in dfont format.
+.TP
+.B \-macbin 
+Generate Macintosh files in MacBinary format.
+.TP
+.B \-res
+Generate Macintosh files in resource format.
+.TP
+.BI \-script " name" 
+Specify the Macintosh script number.
+.SH AUTHOR
+George Williams (gww@silcom.com).
+.LP
+Manual page by
+Ziying Sherwin (sherwin@nlm.nih.gov) and
+R.P.C Rodgers (rodgers@nlm.nih.gov),
+Lister Hill National Center for Biomedical Communications,
+U.S. National Library of Medicine.
+.\" end of manual page

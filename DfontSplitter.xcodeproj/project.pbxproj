@@ -13,6 +13,12 @@
 		D087A557219567B4003C24DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D087A555219567B4003C24DA /* Main.storyboard */; };
 		D087A563219567B4003C24DA /* DfontSplitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087A562219567B4003C24DA /* DfontSplitterTests.swift */; };
 		D087A56E219567B4003C24DA /* DfontSplitterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D087A56D219567B4003C24DA /* DfontSplitterUITests.swift */; };
+		D09306C422039A3300D939E6 /* fondups.c in Sources */ = {isa = PBXBuildFile; fileRef = D09306A222039A3200D939E6 /* fondups.c */; };
+		D09306C822039A3300D939E6 /* fondu.c in Sources */ = {isa = PBXBuildFile; fileRef = D09306A622039A3200D939E6 /* fondu.c */; };
+		D09306C922039A3300D939E6 /* readnfnt.c in Sources */ = {isa = PBXBuildFile; fileRef = D09306A822039A3200D939E6 /* readnfnt.c */; };
+		D09306D622039FB400D939E6 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09306D522039FB400D939E6 /* CoreServices.framework */; };
+		D09306D822039FC200D939E6 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09306D722039FC200D939E6 /* Carbon.framework */; };
+		D09306DA2203A6D100D939E6 /* DragDropTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09306D92203A6D100D939E6 /* DragDropTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +38,18 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D09306962203998600D939E6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		D087A54C219567B2003C24DA /* DfontSplitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DfontSplitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D087A54F219567B2003C24DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +64,46 @@
 		D087A569219567B4003C24DA /* DfontSplitterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DfontSplitterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D087A56D219567B4003C24DA /* DfontSplitterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DfontSplitterUITests.swift; sourceTree = "<group>"; };
 		D087A56F219567B4003C24DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D09306982203998600D939E6 /* DfontSplitter-embedded-fondu */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "DfontSplitter-embedded-fondu"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D093069F22039A3200D939E6 /* MacFiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFiles.h; sourceTree = "<group>"; };
+		D09306A022039A3200D939E6 /* dfont2res.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = dfont2res.1; sourceTree = "<group>"; };
+		D09306A122039A3200D939E6 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		D09306A222039A3200D939E6 /* fondups.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fondups.c; sourceTree = "<group>"; };
+		D09306A322039A3200D939E6 /* ufondpfb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ufondpfb.c; sourceTree = "<group>"; };
+		D09306A422039A3200D939E6 /* showfond.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = showfond.c; sourceTree = "<group>"; };
+		D09306A522039A3200D939E6 /* tomacbinary.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tomacbinary.c; sourceTree = "<group>"; };
+		D09306A622039A3200D939E6 /* fondu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fondu.c; sourceTree = "<group>"; };
+		D09306A722039A3200D939E6 /* config.sub */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = config.sub; sourceTree = "<group>"; };
+		D09306A822039A3200D939E6 /* readnfnt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = readnfnt.c; sourceTree = "<group>"; };
+		D09306A922039A3200D939E6 /* configure */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = configure; sourceTree = "<group>"; };
+		D09306AA22039A3200D939E6 /* showfond.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = showfond.1; sourceTree = "<group>"; };
+		D09306AB22039A3200D939E6 /* lumper.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = lumper.1; sourceTree = "<group>"; };
+		D09306AC22039A3200D939E6 /* psfont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = psfont.h; sourceTree = "<group>"; };
+		D09306AD22039A3200D939E6 /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
+		D09306AE22039A3200D939E6 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		D09306AF22039A3200D939E6 /* fondu.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = fondu.1; sourceTree = "<group>"; };
+		D09306B022039A3200D939E6 /* install-sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "install-sh"; sourceTree = "<group>"; };
+		D09306B122039A3200D939E6 /* frombin.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = frombin.1; sourceTree = "<group>"; };
+		D09306B222039A3200D939E6 /* config.guess */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = config.guess; sourceTree = "<group>"; };
+		D09306B322039A3200D939E6 /* macfonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macfonts.h; sourceTree = "<group>"; };
+		D09306B422039A3300D939E6 /* setfondname.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = setfondname.c; sourceTree = "<group>"; };
+		D09306B522039A3300D939E6 /* dfont2res.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dfont2res.c; sourceTree = "<group>"; };
+		D09306B722039A3300D939E6 /* ufond.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = ufond.1; sourceTree = "<group>"; };
+		D09306B822039A3300D939E6 /* ufond.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ufond.c; sourceTree = "<group>"; };
+		D09306B922039A3300D939E6 /* ufond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ufond.h; sourceTree = "<group>"; };
+		D09306BA22039A3300D939E6 /* lumper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lumper.c; sourceTree = "<group>"; };
+		D09306BB22039A3300D939E6 /* frommacbinary.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = frommacbinary.c; sourceTree = "<group>"; };
+		D09306BC22039A3300D939E6 /* tobin.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = tobin.1; sourceTree = "<group>"; };
+		D09306BD22039A3300D939E6 /* res2data.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = res2data.c; sourceTree = "<group>"; };
+		D09306BE22039A3300D939E6 /* fondu-patch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "fondu-patch"; sourceTree = "<group>"; };
+		D09306BF22039A3300D939E6 /* ufondbdf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ufondbdf.c; sourceTree = "<group>"; };
+		D09306C022039A3300D939E6 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		D09306C122039A3300D939E6 /* ufondttf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ufondttf.c; sourceTree = "<group>"; };
+		D09306C222039A3300D939E6 /* configure.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = configure.in; sourceTree = "<group>"; };
+		D09306C322039A3300D939E6 /* crctab.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crctab.c; sourceTree = "<group>"; };
+		D09306D522039FB400D939E6 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		D09306D722039FC200D939E6 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		D09306D92203A6D100D939E6 /* DragDropTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDropTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +128,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D09306952203998600D939E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D09306D822039FC200D939E6 /* Carbon.framework in Frameworks */,
+				D09306D622039FB400D939E6 /* CoreServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -79,7 +146,9 @@
 				D087A54E219567B2003C24DA /* DfontSplitter */,
 				D087A561219567B4003C24DA /* DfontSplitterTests */,
 				D087A56C219567B4003C24DA /* DfontSplitterUITests */,
+				D09306992203998600D939E6 /* DfontSplitter-embedded-fondu */,
 				D087A54D219567B2003C24DA /* Products */,
+				D09306D422039FB400D939E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +158,7 @@
 				D087A54C219567B2003C24DA /* DfontSplitter.app */,
 				D087A55E219567B4003C24DA /* DfontSplitterTests.xctest */,
 				D087A569219567B4003C24DA /* DfontSplitterUITests.xctest */,
+				D09306982203998600D939E6 /* DfontSplitter-embedded-fondu */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,6 +172,7 @@
 				D087A555219567B4003C24DA /* Main.storyboard */,
 				D087A558219567B4003C24DA /* Info.plist */,
 				D087A559219567B4003C24DA /* DfontSplitter.entitlements */,
+				D09306D92203A6D100D939E6 /* DragDropTableView.swift */,
 			);
 			path = DfontSplitter;
 			sourceTree = "<group>";
@@ -122,6 +193,58 @@
 				D087A56F219567B4003C24DA /* Info.plist */,
 			);
 			path = DfontSplitterUITests;
+			sourceTree = "<group>";
+		};
+		D09306992203998600D939E6 /* DfontSplitter-embedded-fondu */ = {
+			isa = PBXGroup;
+			children = (
+				D09306B222039A3200D939E6 /* config.guess */,
+				D09306A722039A3200D939E6 /* config.sub */,
+				D09306A922039A3200D939E6 /* configure */,
+				D09306C222039A3300D939E6 /* configure.in */,
+				D09306C322039A3300D939E6 /* crctab.c */,
+				D09306A022039A3200D939E6 /* dfont2res.1 */,
+				D09306B522039A3300D939E6 /* dfont2res.c */,
+				D09306BE22039A3300D939E6 /* fondu-patch */,
+				D09306AF22039A3200D939E6 /* fondu.1 */,
+				D09306A622039A3200D939E6 /* fondu.c */,
+				D09306A222039A3200D939E6 /* fondups.c */,
+				D09306B122039A3200D939E6 /* frombin.1 */,
+				D09306BB22039A3300D939E6 /* frommacbinary.c */,
+				D09306B022039A3200D939E6 /* install-sh */,
+				D09306A122039A3200D939E6 /* LICENSE */,
+				D09306AB22039A3200D939E6 /* lumper.1 */,
+				D09306BA22039A3300D939E6 /* lumper.c */,
+				D093069F22039A3200D939E6 /* MacFiles.h */,
+				D09306B322039A3200D939E6 /* macfonts.h */,
+				D09306AE22039A3200D939E6 /* Makefile.in */,
+				D09306AC22039A3200D939E6 /* psfont.h */,
+				D09306C022039A3300D939E6 /* README */,
+				D09306A822039A3200D939E6 /* readnfnt.c */,
+				D09306BD22039A3300D939E6 /* res2data.c */,
+				D09306B422039A3300D939E6 /* setfondname.c */,
+				D09306AA22039A3200D939E6 /* showfond.1 */,
+				D09306A422039A3200D939E6 /* showfond.c */,
+				D09306BC22039A3300D939E6 /* tobin.1 */,
+				D09306A522039A3200D939E6 /* tomacbinary.c */,
+				D09306B722039A3300D939E6 /* ufond.1 */,
+				D09306B822039A3300D939E6 /* ufond.c */,
+				D09306B922039A3300D939E6 /* ufond.h */,
+				D09306BF22039A3300D939E6 /* ufondbdf.c */,
+				D09306A322039A3200D939E6 /* ufondpfb.c */,
+				D09306C122039A3300D939E6 /* ufondttf.c */,
+				D09306AD22039A3200D939E6 /* VERSION */,
+			);
+			path = "DfontSplitter-embedded-fondu";
+			sourceTree = "<group>";
+		};
+		D09306D422039FB400D939E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D09306D722039FC200D939E6 /* Carbon.framework */,
+				D09306D522039FB400D939E6 /* CoreServices.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +303,23 @@
 			productReference = D087A569219567B4003C24DA /* DfontSplitterUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		D09306972203998600D939E6 /* DfontSplitter-embedded-fondu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D093069E2203998600D939E6 /* Build configuration list for PBXNativeTarget "DfontSplitter-embedded-fondu" */;
+			buildPhases = (
+				D09306942203998600D939E6 /* Sources */,
+				D09306952203998600D939E6 /* Frameworks */,
+				D09306962203998600D939E6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DfontSplitter-embedded-fondu";
+			productName = "DfontSplitter-embedded-fondu";
+			productReference = D09306982203998600D939E6 /* DfontSplitter-embedded-fondu */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -201,6 +341,9 @@
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = D087A54B219567B2003C24DA;
 					};
+					D09306972203998600D939E6 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = D087A547219567B2003C24DA /* Build configuration list for PBXProject "DfontSplitter" */;
@@ -219,6 +362,7 @@
 				D087A54B219567B2003C24DA /* DfontSplitter */,
 				D087A55D219567B4003C24DA /* DfontSplitterTests */,
 				D087A568219567B4003C24DA /* DfontSplitterUITests */,
+				D09306972203998600D939E6 /* DfontSplitter-embedded-fondu */,
 			);
 		};
 /* End PBXProject section */
@@ -256,6 +400,7 @@
 			files = (
 				D087A552219567B2003C24DA /* ViewController.swift in Sources */,
 				D087A550219567B2003C24DA /* AppDelegate.swift in Sources */,
+				D09306DA2203A6D100D939E6 /* DragDropTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +417,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D087A56E219567B4003C24DA /* DfontSplitterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D09306942203998600D939E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D09306C422039A3300D939E6 /* fondups.c in Sources */,
+				D09306C922039A3300D939E6 /* readnfnt.c in Sources */,
+				D09306C822039A3300D939E6 /* fondu.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +692,24 @@
 			};
 			name = Release;
 		};
+		D093069C2203998600D939E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4P6R7ZH883;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D093069D2203998600D939E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4P6R7ZH883;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -572,6 +745,15 @@
 			buildConfigurations = (
 				D087A579219567B4003C24DA /* Debug */,
 				D087A57A219567B4003C24DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D093069E2203998600D939E6 /* Build configuration list for PBXNativeTarget "DfontSplitter-embedded-fondu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D093069C2203998600D939E6 /* Debug */,
+				D093069D2203998600D939E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

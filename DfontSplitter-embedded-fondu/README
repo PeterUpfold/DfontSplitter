@@ -1,0 +1,24 @@
+BUILDING FONDU
+ Just type:
+     $ configure
+     $ make
+     # make install
+
+RUNNING FONDU
+ fondu mac-font-files
+   Will convert a series of mac font files (copied over to unix in binhex or
+   macbinary formats) into their equivalent unix font files.
+ ufond unix-font-files
+   Will convert a series of unix font files into the equivalent mac font file(s)
+   If several of the unix fonts have the same font family, then they will all
+   be placed in one mac FOND (family).
+ showfond mac-font-files
+   Will show some information about various mac font resources.
+ tobin files
+   Will take a list of files and convert them into macbinary format
+ frombin files
+   Will take a list of files and convert them from macbinary format
+   (on non-max platforms each output file may be split into three files
+       <filename>.data	For the data fork
+       <filename>.rcsc	For the resource fork
+       <filename>.info	For random info on the font

@@ -1,0 +1,17 @@
+.TH FROMBIN 1 "21 December 2002"
+.SH NAME
+frombin \- convert macbinary files into normal files
+.SH SYNOPSIS
+.B frombin
+.BR  macbinaryfile ...
+.SH DESCRIPTION
+The program
+.B frombin
+reads a series of macbinary files and unwraps them. On the mac it will produce
+a file similar to the original one. On non-macs it will create (up to) three files,
+one for the data fork (called <filename>.data), one for the resource fork (called
+<filename>.rsrc) and one containing random information in a human readable format
+(called <filename>.info).
+.SH AUTHOR
+George Williams (gww@silcom.com).
+.\" end of manual page

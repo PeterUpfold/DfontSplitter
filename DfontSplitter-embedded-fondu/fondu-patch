@@ -1,0 +1,90 @@
+Only in fondu-051010/: config.guess
+Only in fondu-051010/: config.sub
+Only in fondu-051010/: configure
+diff -ur fondu/configure.in fondu-051010/configure.in
+--- fondu/configure.in	2002-12-22 03:41:45.000000000 +0100
++++ fondu-051010/configure.in	2006-01-02 00:52:55.000000000 +0100
+@@ -3,12 +3,9 @@
+ AC_INIT(fondu.c)
+ AC_PROG_CC
+ AC_CANONICAL_HOST
++export HOST=$host
+ 
+-case "$host" in
+-*-apple-darwin*)
+- cp Makefile.Mac Makefile
+- exit 0
+- ;;
+-esac
++AC_SUBST(VPATH)
++AC_SUBST(HOST)
+ 
+ AC_OUTPUT(Makefile)
+diff -ur fondu/Makefile.in fondu-051010/Makefile.in
+--- fondu/Makefile.in	2004-05-27 15:59:02.000000000 +0200
++++ fondu-051010/Makefile.in	2006-01-02 01:37:58.000000000 +0100
+@@ -1,8 +1,14 @@
+-prefix = @prefix@
++wilprefix = @prefix@
+ exec_prefix = @exec_prefix@
+ bindir = @bindir@
+ 
+ CC = @CC@
++srcdir = @srcdir@
++VPATH = @srcdir@
++HOST= @HOST@
++
++
++DARWIN_CORE = $(if $(findstring apple-darwin,$(HOST)),/System/Library/Frameworks/CoreServices.framework/CoreServices,,)
+ 
+ WFLAGS = -Wmissing-prototypes -Wunused -Wimplicit -Wreturn-type -Wparentheses -pedantic
+ CFLAGS = -g $(WFLAGS)
+@@ -18,22 +24,23 @@
+ all: fondu ufond showfond dfont2res tobin frombin lumper setfondname
+ 
+ fondu: $(FONDUOBJS)
+-	$(CC) $(CFLAGS) -o fondu $(FONDUOBJS) -lm
++	$(CC) $(CFLAGS) -o fondu $(FONDUOBJS) -lm $(DARWIN_CORE)
++
+ 
+ ufond: $(UFONDOBJS)
+ 	$(CC) $(CFLAGS) -o ufond $(UFONDOBJS)
+ 
+ showfond: $(SHOWOBJS)
+-	$(CC) $(CFLAGS) -o showfond $(SHOWOBJS)
++	$(CC) $(CFLAGS) -o showfond $(SHOWOBJS) $(DARWIN_CORE)
+ 
+ dfont2res: $(DFONT2RESOBJS)
+ 	$(CC) $(CFLAGS) -o dfont2res $(DFONT2RESOBJS)
+ 
+ tobin: $(TOBINOBJS)
+-	$(CC) $(CFLAGS) -o tobin $(TOBINOBJS)
++	$(CC) $(CFLAGS) -o tobin $(TOBINOBJS) $(DARWIN_CORE)
+ 
+ frombin: $(FROMBINOBJS)
+-	$(CC) $(CFLAGS) -o frombin $(FROMBINOBJS)
++	$(CC) $(CFLAGS) -o frombin $(FROMBINOBJS) $(DARWIN_CORE)
+ 
+ lumper: $(LUMPEROBJS)
+ 	$(CC) $(CFLAGS) -o lumper $(LUMPEROBJS)
+@@ -48,4 +55,17 @@
+ 	-rm Makefile
+ 
+ install: all
+-	cp fondu ufond showfond dfont2res tobin frombin lumper setfondname $(bindir)
++	mkdir -p $(DESTDIR)$(bindir)
++	cp fondu ufond showfond dfont2res tobin frombin lumper setfondname $(DESTDIR)$(bindir)
++
++VERSION=051010
++DISTNAME=fondu-$(VERSION)
++DISTFILES=$(wildcard *.c *.1 *.h) README Makefile.in configure.in configure \
++	LICENSE install-sh config.sub config.guess
++
++
++dist:
++	mkdir $(DISTNAME)
++	ln $(DISTFILES) $(DISTNAME)/
++	tar cfz $(DISTNAME).tar.gz $(DISTNAME) 
++	rm -fr $(DISTNAME)
+Only in fondu: Makefile.Mac
+Only in fondu: Makefile.unix
