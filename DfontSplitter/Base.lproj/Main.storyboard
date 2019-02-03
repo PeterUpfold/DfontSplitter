@@ -762,6 +762,9 @@
                                                                         </connections>
                                                                     </tableCellView>
                                                                 </prototypeCellViews>
+                                                                <connections>
+                                                                    <binding destination="acr-SD-VeR" name="value" keyPath="arrangedObjects.self." id="Qgj-62-0Hn"/>
+                                                                </connections>
                                                             </tableColumn>
                                                         </tableColumns>
                                                         <connections>
@@ -817,10 +820,18 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="arrayController" destination="acr-SD-VeR" id="mmr-02-Tp3"/>
                         <outlet property="fontTableView" destination="yTx-yN-q5U" id="rmM-Y0-hqK"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <arrayController objectClassName="NSString" id="acr-SD-VeR" userLabel="Filenames ArrayController">
+                    <connections>
+                        <binding destination="tk6-T1-xBJ" name="editable" keyPath="values.self" id="8hz-7i-TFX"/>
+                        <outlet property="content" destination="Ulk-iY-5Lt" id="gtn-r4-f1q"/>
+                    </connections>
+                </arrayController>
+                <userDefaultsController representsSharedInstance="YES" id="tk6-T1-xBJ"/>
             </objects>
             <point key="canvasLocation" x="213.5" y="937"/>
         </scene>

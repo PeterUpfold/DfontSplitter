@@ -9,7 +9,7 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,7 +25,7 @@ class ViewController: NSViewController {
     @objc func acceptFilenameDrag(file: NSPasteboardItem) {
         let fileName = URL(string: file.string(forType: NSPasteboard.PasteboardType.fileURL) ?? "")?.absoluteString
         debugPrint(fileName!)
-        
+        arrayController.addObject(fileName! as NSString) // must cast to NSString as Cocoa Bindings observability depends upon KeyValueObserving
         
     }
 
@@ -34,6 +34,8 @@ class ViewController: NSViewController {
     }
     
     @IBOutlet weak var fontTableView: NSTableView!
+    
+    @IBOutlet weak var arrayController: NSArrayController!
     
 }
 
