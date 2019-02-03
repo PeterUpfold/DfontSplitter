@@ -9,6 +9,8 @@ lumper
 setfondname
 Makefile
 
+*.swp
+
 # From: https://github.com/github/gitignore/blob/master/Swift.gitignore
 # Xcode
 #
