@@ -762,9 +762,6 @@
                                                                         </connections>
                                                                     </tableCellView>
                                                                 </prototypeCellViews>
-                                                                <connections>
-                                                                    <binding destination="acr-SD-VeR" name="value" keyPath="arrangedObjects" id="Tad-cf-Nbe"/>
-                                                                </connections>
                                                             </tableColumn>
                                                         </tableColumns>
                                                         <connections>
@@ -827,8 +824,8 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <arrayController objectClassName="NSString" id="acr-SD-VeR" userLabel="Filenames ArrayController">
                     <connections>
+                        <binding destination="XfG-lQ-9wD" name="contentArray" keyPath="self.filenames" id="n6o-nv-9jh"/>
                         <binding destination="tk6-T1-xBJ" name="editable" keyPath="values.self" id="8hz-7i-TFX"/>
-                        <outlet property="content" destination="Ulk-iY-5Lt" id="gtn-r4-f1q"/>
                     </connections>
                 </arrayController>
                 <userDefaultsController representsSharedInstance="YES" id="tk6-T1-xBJ"/>
