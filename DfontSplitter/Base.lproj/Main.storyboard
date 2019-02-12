@@ -730,7 +730,7 @@
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                         <tableColumns>
-                                                            <tableColumn width="116" minWidth="40" maxWidth="1000" id="Ulk-iY-5Lt">
+                                                            <tableColumn width="655" minWidth="40" maxWidth="1000" id="Ulk-iY-5Lt">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                                     <font key="font" metaFont="smallSystem"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -744,16 +744,19 @@
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                 <prototypeCellViews>
                                                                     <tableCellView id="stJ-t0-ACz">
-                                                                        <rect key="frame" x="1" y="1" width="116" height="17"/>
+                                                                        <rect key="frame" x="1" y="1" width="655" height="17"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kfn-07-8l7">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="116" height="17"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="655" height="17"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="tv1-D8-F73">
                                                                                     <font key="font" metaFont="system"/>
                                                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                                    <connections>
+                                                                                        <binding destination="stJ-t0-ACz" name="value" keyPath="objectValue" id="Ijk-e0-RDB"/>
+                                                                                    </connections>
                                                                                 </textFieldCell>
                                                                             </textField>
                                                                         </subviews>
@@ -762,6 +765,9 @@
                                                                         </connections>
                                                                     </tableCellView>
                                                                 </prototypeCellViews>
+                                                                <connections>
+                                                                    <binding destination="acr-SD-VeR" name="value" keyPath="arrangedObjects" id="HKX-Kh-yS2"/>
+                                                                </connections>
                                                             </tableColumn>
                                                         </tableColumns>
                                                         <connections>
@@ -771,7 +777,7 @@
                                                 </subviews>
                                             </clipView>
                                             <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="vTX-H2-wQ8">
-                                                <rect key="frame" x="1" y="132" width="738" height="16"/>
+                                                <rect key="frame" x="1" y="166" width="757" height="16"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                             <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="9Ht-39-lVK">
@@ -824,7 +830,7 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <arrayController objectClassName="NSString" id="acr-SD-VeR" userLabel="Filenames ArrayController">
                     <connections>
-                        <binding destination="XfG-lQ-9wD" name="contentArray" keyPath="self.filenames" id="n6o-nv-9jh"/>
+                        <binding destination="XfG-lQ-9wD" name="contentArray" keyPath="filenames" id="Cqt-7m-gHs"/>
                         <binding destination="tk6-T1-xBJ" name="editable" keyPath="values.self" id="8hz-7i-TFX"/>
                     </connections>
                 </arrayController>

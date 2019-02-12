@@ -22,12 +22,13 @@ class ViewController: NSViewController {
         }
     }
     
-    @objc var filenames: NSArray = []
+    @objc var filenames: NSMutableArray = []
     
     @objc func acceptFilenameDrag(file: NSPasteboardItem) {
         let fileName = URL(string: file.string(forType: NSPasteboard.PasteboardType.fileURL) ?? "")?.absoluteString
         debugPrint(fileName!)
-        arrayController.addObject(fileName) // must cast to NSString as Cocoa Bindings observability depends upon KeyValueObserving
+        //arrayController.addObject(fileName) // must cast to NSString as Cocoa Bindings observability depends upon KeyValueObserving
+        arrayController.addObject(fileName)
         
     }
 
