@@ -1200,7 +1200,7 @@ return( true );
 return( IsResourceInFile(buffer,NULL));
 }
 
-int main(int argc, char **argv) {
+int fondu_main(int argc, char **argv) {
     int i, ret = 0;
 
     for ( i=1; i<argc; ++i )

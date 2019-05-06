@@ -8,6 +8,7 @@
 
 import Cocoa
 
+
 class ViewController: NSViewController {
     
     override func viewDidLoad() {
@@ -34,6 +35,7 @@ class ViewController: NSViewController {
     @IBAction func convertButton(_ sender: Any) {
         for file in arrayController!.arrangedObjects as! [NSString] {
             debugPrint(file)
+            fondu_main()
         }
     }
     
