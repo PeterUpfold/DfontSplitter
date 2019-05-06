@@ -26,14 +26,15 @@ class ViewController: NSViewController {
     
     @objc func acceptFilenameDrag(file: NSPasteboardItem) {
         let fileName = URL(string: file.string(forType: NSPasteboard.PasteboardType.fileURL) ?? "")?.absoluteString
-        debugPrint(fileName!)
-        //arrayController.addObject(fileName) // must cast to NSString as Cocoa Bindings observability depends upon KeyValueObserving
+        //debugPrint(fileName!)
         arrayController.addObject(fileName)
         
     }
 
     @IBAction func convertButton(_ sender: Any) {
-        
+        for file in arrayController!.arrangedObjects as! [NSString] {
+            debugPrint(file)
+        }
     }
     
     @IBOutlet weak var fontTableView: NSTableView!
