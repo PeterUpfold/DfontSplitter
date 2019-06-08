@@ -1200,6 +1200,10 @@ return( true );
 return( IsResourceInFile(buffer,NULL));
 }
 
+int fondu_main_simple(char *file) {
+    return FindResourceFile(file);
+}
+
 int fondu_main(int argc, char **argv) {
     int i, ret = 0;
 
