@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -619,7 +619,7 @@
                                         <menuItem title="Show Sidebar" keyEquivalent="s" id="kIP-vf-haE">
                                             <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                             <connections>
-                                                <action selector="toggleSourceList:" target="Ady-hI-5gd" id="iwa-gc-5KM"/>
+                                                <action selector="toggleSidebar:" target="Ady-hI-5gd" id="iwa-gc-5KM"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Enter Full Screen" keyEquivalent="f" id="4J7-dP-txa">
@@ -815,11 +815,24 @@
                                 </view>
                             </box>
                             <box fixedFrame="YES" title="Destination Folder" translatesAutoresizingMaskIntoConstraints="NO" id="bhk-ri-N9y">
-                                <rect key="frame" x="17" y="98" width="795" height="89"/>
+                                <rect key="frame" x="17" y="111" width="795" height="76"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" id="PpV-hq-XWL">
-                                    <rect key="frame" x="3" y="3" width="789" height="71"/>
+                                    <rect key="frame" x="3" y="3" width="789" height="58"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <pathControl verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SdN-bd-LXc">
+                                            <rect key="frame" x="23" y="17" width="204" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <pathCell key="cell" controlSize="small" selectable="YES" editable="YES" alignment="left" pathStyle="popUp" id="oFC-k2-Xiq">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <url key="url" string="file:///Users/"/>
+                                                <allowedTypes>
+                                                    <string>public.folder</string>
+                                                </allowedTypes>
+                                            </pathCell>
+                                        </pathControl>
+                                    </subviews>
                                 </view>
                             </box>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gLb-UP-giH">
@@ -842,6 +855,7 @@
                     <connections>
                         <outlet property="arrayController" destination="acr-SD-VeR" id="mmr-02-Tp3"/>
                         <outlet property="fontTableView" destination="yTx-yN-q5U" id="rmM-Y0-hqK"/>
+                        <outlet property="pathControl" destination="SdN-bd-LXc" id="12f-ZF-vw9"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

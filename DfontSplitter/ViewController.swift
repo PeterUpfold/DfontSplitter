@@ -32,6 +32,8 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        //pathControl.stringValue = FileManager.default.homeDirectoryForCurrentUser.absoluteString // sandboxing makes this path ugly and not the home folder :(
+        
     }
 
     override var representedObject: Any? {
@@ -56,15 +58,45 @@ class ViewController: NSViewController {
             
             let unsafePointerOfFilename = file.utf8String
             var unsafeMutablePointerOfFilename: UnsafeMutablePointer<Int8> = UnsafeMutablePointer<Int8>(mutating: unsafePointerOfFilename!)
+            
+            FileManager.default.changeCurrentDirectoryPath(NSTemporaryDirectory())
+            debugPrint("temp dir is \(FileManager.default.currentDirectoryPath)")
+            
             let returnValue = fondu_main_simple(unsafeMutablePointerOfFilename)
+            // here we get the bool result of FindResourceFile, so '1' is success
             
             debugPrint("fondu returned \(returnValue)")
+            
+            // get file(s) from temp directory and move to target directory
+            debugPrint("destination dir is \(pathControl.stringValue)")
+            
+          
+            do {
+                for file in try FileManager.default.contentsOfDirectory(atPath: FileManager.default.currentDirectoryPath) {
+                  
+                    // construct destination URL
+                    let destination = URL(fileURLWithPath: pathControl.stringValue).appendingPathComponent(file)
+                    
+                    do {
+                        try FileManager.default.copyItem(at: URL(fileURLWithPath: file), to: destination)
+                    }
+                    catch {
+                        debugPrint("Failed to copy file \(file): \(error.localizedDescription)")
+                    }
+                }
+            }
+            catch {
+                debugPrint("\(error.localizedDescription)")
+            }
+            
         }
     }
     
     @IBOutlet weak var fontTableView: NSTableView!
     
     @IBOutlet weak var arrayController: NSArrayController!
+    
+    @IBOutlet weak var pathControl: NSPathControl!
     
 }
 

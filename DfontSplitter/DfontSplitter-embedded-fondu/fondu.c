@@ -775,6 +775,7 @@ static void SearchTtfResources(FILE *f,long rlistpos,int subcnt,long rdata_pos,
     int max = 0;
     FILE *ttf;
 
+    /* PU -- Where TTFs are actually written */
     fseek(f,rlistpos,SEEK_SET);
     for ( i=0; i<subcnt; ++i ) {
 	/* resource id = */ getushort(f);
@@ -1201,6 +1202,7 @@ return( IsResourceInFile(buffer,NULL));
 }
 
 int fondu_main_simple(char *file) {
+    force = true;
     return FindResourceFile(file);
 }
 
