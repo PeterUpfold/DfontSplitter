@@ -356,6 +356,9 @@
 					D087A54B219567B2003C24DA = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
+							com.apple.HardenedRuntime = {
+								enabled = 1;
+							};
 							com.apple.Sandbox = {
 								enabled = 1;
 							};
@@ -609,6 +612,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4P6R7ZH883;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = DfontSplitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -629,6 +633,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4P6R7ZH883;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = DfontSplitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -636,6 +641,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = uk.org.upfold.DfontSplitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DfontSplitter/DfontSplitter-embedded-fondu-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;

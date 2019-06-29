@@ -57,7 +57,7 @@ class ViewController: NSViewController {
             
             
             let unsafePointerOfFilename = file.utf8String
-            var unsafeMutablePointerOfFilename: UnsafeMutablePointer<Int8> = UnsafeMutablePointer<Int8>(mutating: unsafePointerOfFilename!)
+            let unsafeMutablePointerOfFilename: UnsafeMutablePointer<Int8> = UnsafeMutablePointer<Int8>(mutating: unsafePointerOfFilename!)
             
             FileManager.default.changeCurrentDirectoryPath(NSTemporaryDirectory())
             debugPrint("temp dir is \(FileManager.default.currentDirectoryPath)")
@@ -77,11 +77,19 @@ class ViewController: NSViewController {
                     // construct destination URL
                     let destination = URL(fileURLWithPath: pathControl.stringValue).appendingPathComponent(file)
                     
-                    do {
-                        try FileManager.default.copyItem(at: URL(fileURLWithPath: file), to: destination)
+                    // does destination exist?
+                    var overwrite = true
+                    if FileManager.default.fileExists(atPath: destination.path) {
+                        overwrite = overwriteDialogue(question: "Overwrite stuff?", text: "Choose your adventure.")
                     }
-                    catch {
-                        debugPrint("Failed to copy file \(file): \(error.localizedDescription)")
+                    
+                    if (overwrite) {
+                        do {
+                            try FileManager.default.copyItem(at: URL(fileURLWithPath: file), to: destination)
+                        }
+                        catch {
+                            debugPrint("Failed to copy file \(file): \(error.localizedDescription)")
+                        }
                     }
                 }
             }
@@ -92,11 +100,29 @@ class ViewController: NSViewController {
         }
     }
     
+    func overwriteDialogue(question: String, text: String) -> Bool {
+        let alert = NSAlert()
+        alert.messageText = question
+        alert.informativeText = text
+        alert.alertStyle = .warning
+        alert.addButton(withTitle: "Overwrite")
+        alert.addButton(withTitle: "Cancel")
+        
+        alert.beginSheetModal(for: window, completionHandler: {{ (response) in
+            debugPrint(response)
+            }}())
+        
+        return false // TODO TODO
+        
+    }
+    
     @IBOutlet weak var fontTableView: NSTableView!
     
     @IBOutlet weak var arrayController: NSArrayController!
     
     @IBOutlet weak var pathControl: NSPathControl!
+    
+    @IBOutlet weak var window: NSWindow!
     
 }
 
