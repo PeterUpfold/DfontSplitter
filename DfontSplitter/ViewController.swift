@@ -63,12 +63,11 @@ class ViewController: NSViewController {
     
     @IBAction func convertButton(_ sender: Any) {
         
-        
-        
-        
+
         for file in arrayController!.arrangedObjects as! [NSString] {
             debugPrint(file)
             
+        
             
             let unsafePointerOfFilename = file.utf8String
             let unsafeMutablePointerOfFilename: UnsafeMutablePointer<Int8> = UnsafeMutablePointer<Int8>(mutating: unsafePointerOfFilename!)
@@ -76,17 +75,23 @@ class ViewController: NSViewController {
             FileManager.default.changeCurrentDirectoryPath(NSTemporaryDirectory())
             debugPrint("temp dir is \(FileManager.default.currentDirectoryPath)")
             
-            let returnValue = fondu_main_simple(unsafeMutablePointerOfFilename)
-            // here we get the bool result of FindResourceFile, so '1' is success
+            let fileURL = URL(fileURLWithPath: String(file))
             
-            debugPrint("fondu returned \(returnValue)")
+            if (fileIsDfont(file: fileURL) || fileIsSuitcase(file: fileURL)) {
+                let returnValue = fondu_main_simple(unsafeMutablePointerOfFilename)
+                // here we get the bool result of FindResourceFile, so '1' is success
+                
+                debugPrint("fondu returned \(returnValue)")
+            }
+            else if (fileIsTTC(file: fileURL)) {
+                
+            }
+
             
             // get file(s) from temp directory and move to target directory
             debugPrint("destination dir is \(pathControl.stringValue)")
             
           
-            
-            var anyFileRequiredPrompt = false
             
             do {
                 for file in try FileManager.default.contentsOfDirectory(atPath: FileManager.default.currentDirectoryPath) {
@@ -96,7 +101,6 @@ class ViewController: NSViewController {
                     
                     // does destination exist?
                     if FileManager.default.fileExists(atPath: destination.path) {
-                        anyFileRequiredPrompt = true
                         maybeOverwriteFileWithPrompt(
                             question: "“\(destination.path)” already exists. Do you want to replace it?", text: "A file that will be extracted has the same name as a file that already exists in the destination folder. Replacing it will overwrite its current contents.",
                             file: URL(fileURLWithPath: file),
@@ -107,7 +111,8 @@ class ViewController: NSViewController {
                             try FileManager.default.copyItem(at: URL(fileURLWithPath: file), to: destination)
                         }
                         catch {
-                            debugPrint("Failed to copy file \(file): \(error.localizedDescription)")
+                            debugPrint("Failed to copy extracted file \(file): \(error.localizedDescription)")
+                            showCopyError(text: error.localizedDescription)
                         }
                     }
                 }
@@ -118,6 +123,13 @@ class ViewController: NSViewController {
             
             
         }
+    }
+    
+    func showCopyError(text: String) -> Void {
+        let alert = NSAlert()
+        alert.messageText = "Unable to copy an extracted file to the destination."
+        alert.informativeText = text
+        alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: nil)
     }
     
     
@@ -141,11 +153,30 @@ class ViewController: NSViewController {
                 }
                 catch {
                     debugPrint("Failed to copy file \(file): \(error.localizedDescription)")
+                    self.showCopyError(text: error.localizedDescription)
                 }
             }
             }}())
         
         
+    }
+    
+    func fileIsDfont(file: URL) -> Bool {
+        let uti = try? file.resourceValues(forKeys:[.typeIdentifierKey]).typeIdentifier
+
+        return (uti == "com.apple.truetype-datafork-suitcase-font")
+    }
+    
+    func fileIsSuitcase(file: URL) -> Bool {
+        let uti = try? file.resourceValues(forKeys:[.typeIdentifierKey]).typeIdentifier
+        
+        return (uti == "com.apple.font-suitcase")
+    }
+    
+    func fileIsTTC(file: URL) -> Bool {
+        let uti = try? file.resourceValues(forKeys:[.typeIdentifierKey]).typeIdentifier
+        
+        return (uti == "public.truetype-collection-font")
     }
     
     @IBOutlet weak var fontTableView: NSTableView!
