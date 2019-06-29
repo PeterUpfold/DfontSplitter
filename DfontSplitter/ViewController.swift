@@ -28,6 +28,7 @@ import Cocoa
 
 class ViewController: NSViewController {
     
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,6 +37,12 @@ class ViewController: NSViewController {
         
         let window = NSApp.mainWindow
         
+    }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        self.view.window?.title = "DfontSplitter"
+        self.view.window?.representedURL = nil
     }
 
     override var representedObject: Any? {
@@ -53,7 +60,12 @@ class ViewController: NSViewController {
         
     }
 
+    
     @IBAction func convertButton(_ sender: Any) {
+        
+        
+        
+        
         for file in arrayController!.arrangedObjects as! [NSString] {
             debugPrint(file)
             
@@ -73,6 +85,9 @@ class ViewController: NSViewController {
             debugPrint("destination dir is \(pathControl.stringValue)")
             
           
+            
+            var anyFileRequiredPrompt = false
+            
             do {
                 for file in try FileManager.default.contentsOfDirectory(atPath: FileManager.default.currentDirectoryPath) {
                   
@@ -81,7 +96,11 @@ class ViewController: NSViewController {
                     
                     // does destination exist?
                     if FileManager.default.fileExists(atPath: destination.path) {
-                        maybeOverwriteFileWithPrompt(question: "“\(destination.path)” already exists. Do you want to replace it?", text: "A file that will be extracted has the same name as a file that already exists in the destination folder. Replacing it will overwrite its current contents.", file: URL(fileURLWithPath: file), destination: destination)
+                        anyFileRequiredPrompt = true
+                        maybeOverwriteFileWithPrompt(
+                            question: "“\(destination.path)” already exists. Do you want to replace it?", text: "A file that will be extracted has the same name as a file that already exists in the destination folder. Replacing it will overwrite its current contents.",
+                            file: URL(fileURLWithPath: file),
+                            destination: destination)
                     }
                     else {
                         do {
@@ -97,10 +116,12 @@ class ViewController: NSViewController {
                 debugPrint("\(error.localizedDescription)")
             }
             
+            
         }
     }
     
     
+    // Returns number of files copied (1, or 0)
     func maybeOverwriteFileWithPrompt(question: String, text: String, file: URL, destination: URL) -> Void {
         let alert = NSAlert()
         alert.messageText = question
@@ -114,7 +135,6 @@ class ViewController: NSViewController {
                 debugPrint("Will overwrite \(file) as requested")
                 
                 
-                
                 do {
                     try FileManager.default.removeItem(atPath: destination.path)
                     try FileManager.default.copyItem(at: URL(resolvingAliasFileAt: file), to: destination)
@@ -124,6 +144,7 @@ class ViewController: NSViewController {
                 }
             }
             }}())
+        
         
     }
     
@@ -135,7 +156,7 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var window: NSWindow!
     
-    @IBOutlet weak var statusLabel: NSLabel!
+    @IBOutlet weak var statusLabel: NSTextField!
     
 }
 
