@@ -34,6 +34,8 @@ class ViewController: NSViewController {
         // Do any additional setup after loading the view.
         //pathControl.stringValue = FileManager.default.homeDirectoryForCurrentUser.absoluteString // sandboxing makes this path ugly and not the home folder :(
         
+        let window = NSApp.mainWindow
+        
     }
 
     override var representedObject: Any? {
@@ -78,12 +80,10 @@ class ViewController: NSViewController {
                     let destination = URL(fileURLWithPath: pathControl.stringValue).appendingPathComponent(file)
                     
                     // does destination exist?
-                    var overwrite = true
                     if FileManager.default.fileExists(atPath: destination.path) {
-                        overwrite = overwriteDialogue(question: "Overwrite stuff?", text: "Choose your adventure.")
+                        maybeOverwriteFileWithPrompt(question: "“\(destination.path)” already exists. Do you want to replace it?", text: "A file that will be extracted has the same name as a file that already exists in the destination folder. Replacing it will overwrite its current contents.", file: URL(fileURLWithPath: file), destination: destination)
                     }
-                    
-                    if (overwrite) {
+                    else {
                         do {
                             try FileManager.default.copyItem(at: URL(fileURLWithPath: file), to: destination)
                         }
@@ -100,19 +100,30 @@ class ViewController: NSViewController {
         }
     }
     
-    func overwriteDialogue(question: String, text: String) -> Bool {
+    
+    func maybeOverwriteFileWithPrompt(question: String, text: String, file: URL, destination: URL) -> Void {
         let alert = NSAlert()
         alert.messageText = question
         alert.informativeText = text
         alert.alertStyle = .warning
-        alert.addButton(withTitle: "Overwrite")
+        alert.addButton(withTitle: "Replace")
         alert.addButton(withTitle: "Cancel")
         
-        alert.beginSheetModal(for: window, completionHandler: {{ (response) in
-            debugPrint(response)
+        alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: {{ (response) in
+            if (response == NSApplication.ModalResponse.alertFirstButtonReturn) {
+                debugPrint("Will overwrite \(file) as requested")
+                
+                
+                
+                do {
+                    try FileManager.default.removeItem(atPath: destination.path)
+                    try FileManager.default.copyItem(at: URL(resolvingAliasFileAt: file), to: destination)
+                }
+                catch {
+                    debugPrint("Failed to copy file \(file): \(error.localizedDescription)")
+                }
+            }
             }}())
-        
-        return false // TODO TODO
         
     }
     
@@ -123,6 +134,8 @@ class ViewController: NSViewController {
     @IBOutlet weak var pathControl: NSPathControl!
     
     @IBOutlet weak var window: NSWindow!
+    
+    @IBOutlet weak var statusLabel: NSLabel!
     
 }
 

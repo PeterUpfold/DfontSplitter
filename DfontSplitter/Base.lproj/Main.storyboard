@@ -851,12 +851,22 @@
                                 <rect key="frame" x="683" y="23" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </progressIndicator>
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qns-Aw-Qbo">
+                                <rect key="frame" x="20" y="44" width="43" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" placeholderString="Status" id="YD8-3N-gR1">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="arrayController" destination="acr-SD-VeR" id="mmr-02-Tp3"/>
                         <outlet property="fontTableView" destination="yTx-yN-q5U" id="rmM-Y0-hqK"/>
                         <outlet property="pathControl" destination="SdN-bd-LXc" id="12f-ZF-vw9"/>
+                        <outlet property="statusLabel" destination="qns-Aw-Qbo" id="HHq-Im-vz4"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
