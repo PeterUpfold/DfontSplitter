@@ -84,7 +84,18 @@ class ViewController: NSViewController {
                 debugPrint("fondu returned \(returnValue)")
             }
             else if (fileIsTTC(file: fileURL)) {
-                
+                let alert = NSAlert()
+                alert.messageText = "TTC splitting not implemented for “\(file)”."
+                alert.informativeText = "DfontSplitter has not had TTC splitting implemented."
+                alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: nil)
+                return
+            }
+            else {
+                let alert = NSAlert()
+                alert.messageText = "Unable to determine the type of file “\(file)”."
+                alert.informativeText = "DfontSplitter could not determine the type of this file, so does not understand how to convert it."
+                alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: nil)
+                return
             }
 
             
