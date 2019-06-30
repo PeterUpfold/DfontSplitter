@@ -12,7 +12,7 @@
                     <window key="window" identifier="Preferences" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="2Nt-YU-shn">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="425" y="461" width="480" height="111"/>
+                        <rect key="contentRect" x="425" y="461" width="480" height="59"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
                         <accessibility description="Preferences" identifier="Preferences"/>
                         <connections>
@@ -25,18 +25,18 @@
                 </windowController>
                 <customObject id="gYy-hu-3uU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4" y="-81.5"/>
+            <point key="canvasLocation" x="4" y="-107.5"/>
         </scene>
         <!--Preferences-->
         <scene sceneID="3aG-IX-mgy">
             <objects>
                 <viewController title="Preferences" id="4bZ-Uh-fP1" customClass="PreferencesViewController" customModule="DfontSplitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="r89-QS-vjG">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="136"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="84"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ahQ-qD-2xq">
-                                <rect key="frame" x="18" y="59" width="336" height="18"/>
+                                <rect key="frame" x="18" y="40" width="336" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Open a Finder window when conversion is complete" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="3l0-Jj-oKq">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -54,7 +54,7 @@
                 </viewController>
                 <customObject id="Q7N-gJ-tjZ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="711" y="-94"/>
+            <point key="canvasLocation" x="711" y="-120"/>
         </scene>
     </scenes>
 </document>

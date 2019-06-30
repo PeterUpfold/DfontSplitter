@@ -204,5 +204,7 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var statusLabel: NSTextField!
     
+    @IBAction func addFileToSourceFonts(_ sender: Any) {
+    }
 }
 

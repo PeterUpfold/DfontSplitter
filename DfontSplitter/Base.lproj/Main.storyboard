@@ -801,6 +801,9 @@
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="addFileToSourceFonts:" target="XfG-lQ-9wD" id="7xT-i3-LPz"/>
+                                            </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wo-d4-GSb">
                                             <rect key="frame" x="33" y="19" width="23" height="21"/>
@@ -809,11 +812,15 @@
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="remove:" target="acr-SD-VeR" id="BEs-Z4-mwf"/>
+                                                <binding destination="acr-SD-VeR" name="enabled" keyPath="canRemove" id="giX-P4-PQt"/>
+                                            </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cLR-2p-ghn">
-                                            <rect key="frame" x="8" y="233" width="369" height="14"/>
+                                            <rect key="frame" x="8" y="233" width="397" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Click the Add button, or drag .dfont or Font Suitcase files into the list." id="dX0-M7-4UY">
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Click the Add button, or drag .dfont, TTC or Font Suitcase files into the list." id="dX0-M7-4UY">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -847,9 +854,9 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MlC-JN-j8K">
-                                <rect key="frame" x="20" y="478" width="534" height="17"/>
+                                <rect key="frame" x="20" y="478" width="567" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="DfontSplitter can extract TrueType TTF font files from Dfont and Font Suitcase archives." id="I3U-eR-1Ek">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="DfontSplitter can extract TrueType TTF font files from Dfont, TTC and Font Suitcase archives." id="I3U-eR-1Ek">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
