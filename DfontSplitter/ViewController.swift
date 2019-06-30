@@ -117,6 +117,12 @@ class ViewController: NSViewController {
                     else {
                         do {
                             try FileManager.default.copyItem(at: URL(fileURLWithPath: file), to: destination)
+                            
+                            if (UserDefaults.standard.bool(forKey: "OpenFinderWindowAfterConvert")) {
+                                debugPrint("Will spawn Finder at \(pathControl.stringValue)")
+                                NSWorkspace.shared.selectFile(destination.path, inFileViewerRootedAtPath: pathControl.stringValue)
+                            }
+                            
                         }
                         catch {
                             debugPrint("Failed to copy extracted file \(file): \(error.localizedDescription)")
@@ -157,6 +163,10 @@ class ViewController: NSViewController {
                 do {
                     try FileManager.default.removeItem(atPath: destination.path)
                     try FileManager.default.copyItem(at: URL(resolvingAliasFileAt: file), to: destination)
+                    
+                    if (UserDefaults.standard.bool(forKey: "OpenFinderWindowAfterConvert")) {
+                        NSWorkspace.shared.selectFile(destination.path, inFileViewerRootedAtPath: destination.path)
+                    }
                 }
                 catch {
                     debugPrint("Failed to copy file \(file): \(error.localizedDescription)")
