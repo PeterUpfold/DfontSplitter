@@ -19,6 +19,8 @@
 		D09306D622039FB400D939E6 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09306D522039FB400D939E6 /* CoreServices.framework */; };
 		D09306D822039FC200D939E6 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09306D722039FC200D939E6 /* Carbon.framework */; };
 		D09306DA2203A6D100D939E6 /* DragDropTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09306D92203A6D100D939E6 /* DragDropTableView.swift */; };
+		D0DDA4A422C8828E00A113B7 /* stripttc.h in Headers */ = {isa = PBXBuildFile; fileRef = D0DDA4A222C8828E00A113B7 /* stripttc.h */; };
+		D0DDA4A522C8828E00A113B7 /* stripttc.c in Sources */ = {isa = PBXBuildFile; fileRef = D0DDA4A322C8828E00A113B7 /* stripttc.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,8 @@
 		D09306D522039FB400D939E6 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		D09306D722039FC200D939E6 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		D09306D92203A6D100D939E6 /* DragDropTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDropTableView.swift; sourceTree = "<group>"; };
+		D0DDA4A222C8828E00A113B7 /* stripttc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stripttc.h; sourceTree = "<group>"; };
+		D0DDA4A322C8828E00A113B7 /* stripttc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = stripttc.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +223,7 @@
 		D087A54E219567B2003C24DA /* DfontSplitter */ = {
 			isa = PBXGroup;
 			children = (
+				D0DDA4A122C8826800A113B7 /* fontforge-tools */,
 				D003553A2280497B00159AD6 /* DfontSplitter-embedded-fondu */,
 				D00DAC0B228046310069B1E2 /* DfontSplitter-embedded-fondu-Bridging-Header.h */,
 				D087A54F219567B2003C24DA /* AppDelegate.swift */,
@@ -259,6 +264,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D0DDA4A122C8826800A113B7 /* fontforge-tools */ = {
+			isa = PBXGroup;
+			children = (
+				D0DDA4A222C8828E00A113B7 /* stripttc.h */,
+				D0DDA4A322C8828E00A113B7 /* stripttc.c */,
+			);
+			path = "fontforge-tools";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -266,6 +280,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0DDA4A422C8828E00A113B7 /* stripttc.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +448,7 @@
 				D087A552219567B2003C24DA /* ViewController.swift in Sources */,
 				D087A550219567B2003C24DA /* AppDelegate.swift in Sources */,
 				D0035565228049BC00159AD6 /* fondu.c in Sources */,
+				D0DDA4A522C8828E00A113B7 /* stripttc.c in Sources */,
 				D0035564228049B900159AD6 /* fondups.c in Sources */,
 				D0035566228049DF00159AD6 /* readnfnt.c in Sources */,
 				D09306DA2203A6D100D939E6 /* DragDropTableView.swift in Sources */,

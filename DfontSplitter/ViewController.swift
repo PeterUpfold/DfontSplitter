@@ -84,11 +84,14 @@ class ViewController: NSViewController {
                 debugPrint("fondu returned \(returnValue)")
             }
             else if (fileIsTTC(file: fileURL)) {
-                let alert = NSAlert()
-                alert.messageText = "TTC splitting not implemented for “\(file)”."
-                alert.informativeText = "DfontSplitter has not had TTC splitting implemented."
-                alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: nil)
-                return
+//                let alert = NSAlert()
+//                alert.messageText = "TTC splitting not implemented for “\(file)”."
+//                alert.informativeText = "DfontSplitter has not had TTC splitting implemented."
+//                alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: nil)
+                
+                let returnValue = handlefile(unsafeMutablePointerOfFilename)
+                
+                debugPrint("stripttc returned \(returnValue)")
             }
             else {
                 let alert = NSAlert()
