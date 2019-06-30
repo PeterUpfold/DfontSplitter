@@ -5,7 +5,7 @@ target 'DfontSplitter' do
   use_frameworks!
 
   # Pods for DfontSplitter
-  pod 'Sparkle'
+  
 
   target 'DfontSplitterTests' do
     inherit! :search_paths

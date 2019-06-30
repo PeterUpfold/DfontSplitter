@@ -3,33 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		ED77B4B88587C894E85C361023D67C53 /* Sparkle */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 2C8D06A2289713323892B3638F08AC0B /* Build configuration list for PBXAggregateTarget "Sparkle" */;
-			buildPhases = (
-			);
-			dependencies = (
-			);
-			name = Sparkle;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		3A63CA39E5391A3D98E29D5925EC4416 /* Pods-DfontSplitterTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19805161A891904FEBF588D3D8FEB5E1 /* Pods-DfontSplitterTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5CF687CF0DAFDBE31CC965556639860B /* Pods-DfontSplitter-embedded-fondu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B3DD6263DF9C5F805119B84CE570419 /* Pods-DfontSplitter-embedded-fondu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B8BB34EB29B4B53760CD76A84145BD9 /* Pods-DfontSplitter-embedded-fondu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE21950F9CADCCF03C5DADAD1AE0FD6A /* Pods-DfontSplitter-embedded-fondu-dummy.m */; };
-		9B153B2F2D5FE1BE21AC87DCB0A9070F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
+		3A63CA39E5391A3D98E29D5925EC4416 /* Pods-DfontSplitterTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 004BDA617DE886FCC0F8B73904456D70 /* Pods-DfontSplitterTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50CAF6B44FF280C829F83E27E342C2F2 /* Pods-DfontSplitter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D079136A88FF15F7BC66EB569100B7 /* Pods-DfontSplitter-dummy.m */; };
+		56B837E1DD6E75C49CE6CD83DD2DA2F7 /* Pods-DfontSplitter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E52E1FB49E5DE100A40CA58A2BE4431D /* Pods-DfontSplitter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CF687CF0DAFDBE31CC965556639860B /* Pods-DfontSplitter-embedded-fondu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F8F3FD29AF1D0CFBC121ACDD1DE461E3 /* Pods-DfontSplitter-embedded-fondu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B8BB34EB29B4B53760CD76A84145BD9 /* Pods-DfontSplitter-embedded-fondu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C11AB8576F6FDEEE2D945A4393DE8A64 /* Pods-DfontSplitter-embedded-fondu-dummy.m */; };
 		A41A499E8604C167BBF7A18307868660 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
-		BE9C1829E3EC613C05CAA4411D62F2F5 /* Pods-DfontSplitterTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBF24ADAE357CC36A153768D72B73F2 /* Pods-DfontSplitterTests-dummy.m */; };
+		BE9C1829E3EC613C05CAA4411D62F2F5 /* Pods-DfontSplitterTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ADF1686CDA623374006F70D8C474CA /* Pods-DfontSplitterTests-dummy.m */; };
 		D5E0B5B305B2164396E18D47383E7F92 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
-		D683F200FA219A1B7811A26D585D0593 /* Pods-DfontSplitterUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A65751779175EC3C2A030031178B90A6 /* Pods-DfontSplitterUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E6C67BE78BAD718E37B4373E25E825CA /* Pods-DfontSplitterUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0094BE461E8E776F8C9BCBF6B55F1EAD /* Pods-DfontSplitterUITests-dummy.m */; };
-		ECA9CD60CF61F4187F4AC1F63B6A8CE7 /* Pods-DfontSplitter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB94A3D237DBD53158CD1CD7C7F99E3 /* Pods-DfontSplitter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F0910D0A76D0D84905037AD97039481E /* Pods-DfontSplitter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE16EB6A3AA03134C5F0593FA723EA40 /* Pods-DfontSplitter-dummy.m */; };
+		D683F200FA219A1B7811A26D585D0593 /* Pods-DfontSplitterUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CE1E11B23BCD1C1BB14315E99CA268C /* Pods-DfontSplitterUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE13A7F385BD76A4F302EF5B14B6842C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
+		E6C67BE78BAD718E37B4373E25E825CA /* Pods-DfontSplitterUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB69F4208447214F452A954C022A0F0C /* Pods-DfontSplitterUITests-dummy.m */; };
 		FE5647109E8B6ED64A57FCC9ACF8DCEE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,75 +36,47 @@
 			remoteGlobalIDString = 11EE31AE46999A2713D4730A6BCFC10E;
 			remoteInfo = "Pods-DfontSplitter";
 		};
-		F9C8B269F9D29EB47B797269DE951835 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = ED77B4B88587C894E85C361023D67C53;
-			remoteInfo = Sparkle;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0094BE461E8E776F8C9BCBF6B55F1EAD /* Pods-DfontSplitterUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DfontSplitterUITests-dummy.m"; sourceTree = "<group>"; };
-		0332A469918DDC7200DC05857FD3100A /* SPUDownloaderSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloaderSession.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloaderSession.h; sourceTree = "<group>"; };
-		05C8EC1E598BF8EFC6CE546C9CA3C3A2 /* SUVersionComparisonProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUVersionComparisonProtocol.h; path = Sparkle.framework/Versions/A/Headers/SUVersionComparisonProtocol.h; sourceTree = "<group>"; };
-		061612F781DEEEDDF94036F818AB2213 /* Pods-DfontSplitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DfontSplitter.debug.xcconfig"; sourceTree = "<group>"; };
-		164A58EB240E3D712158E07256E9D04C /* Sparkle.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Sparkle.xcconfig; sourceTree = "<group>"; };
-		19805161A891904FEBF588D3D8FEB5E1 /* Pods-DfontSplitterTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DfontSplitterTests-umbrella.h"; sourceTree = "<group>"; };
-		20B1BA6068BA2FBD15C3EA42CC318BBE /* SUVersionDisplayProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUVersionDisplayProtocol.h; path = Sparkle.framework/Versions/A/Headers/SUVersionDisplayProtocol.h; sourceTree = "<group>"; };
-		2179011B680B8576C8D36EA8FCFDCF1F /* SUCodeSigningVerifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUCodeSigningVerifier.h; path = Sparkle.framework/Versions/A/Headers/SUCodeSigningVerifier.h; sourceTree = "<group>"; };
-		23A4C129EAD89A35261E5FE317CC8171 /* SPUURLRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUURLRequest.h; path = Sparkle.framework/Versions/A/Headers/SPUURLRequest.h; sourceTree = "<group>"; };
-		31999744CB19D20926472B6B719A81DD /* Pods-DfontSplitterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DfontSplitterUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		399C150840A1C2150618FB5BFE42DA9C /* SUAppcast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUAppcast.h; path = Sparkle.framework/Versions/A/Headers/SUAppcast.h; sourceTree = "<group>"; };
-		3B3DD6263DF9C5F805119B84CE570419 /* Pods-DfontSplitter-embedded-fondu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DfontSplitter-embedded-fondu-umbrella.h"; sourceTree = "<group>"; };
-		4141435D9975E8E9CDCC84B3A32156A8 /* SUUpdater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUUpdater.h; path = Sparkle.framework/Versions/A/Headers/SUUpdater.h; sourceTree = "<group>"; };
+		004BDA617DE886FCC0F8B73904456D70 /* Pods-DfontSplitterTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DfontSplitterTests-umbrella.h"; sourceTree = "<group>"; };
+		022DED31EC55809CC272F9D5DDDACAC6 /* Pods-DfontSplitter-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DfontSplitter-Info.plist"; sourceTree = "<group>"; };
+		0BC63463DA7F77683EF64C4E0B8FB3D2 /* Pods-DfontSplitterUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DfontSplitterUITests.modulemap"; sourceTree = "<group>"; };
+		16EC878E0357A3437A52DE4C4EDA852F /* Pods-DfontSplitterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DfontSplitterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1A46729205084906EEB86F2808BF320A /* Pods-DfontSplitterTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DfontSplitterTests.modulemap"; sourceTree = "<group>"; };
+		1C633C7FBD7CC2EC2944EBE6492F334E /* Pods-DfontSplitterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DfontSplitterUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1CE1E11B23BCD1C1BB14315E99CA268C /* Pods-DfontSplitterUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DfontSplitterUITests-umbrella.h"; sourceTree = "<group>"; };
+		1D6AC3918715E7BA91E54A750179968A /* Pods-DfontSplitter-embedded-fondu-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DfontSplitter-embedded-fondu-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2C54EADDA6B7D5656DE45A1BEEA3CC85 /* Pods-DfontSplitter-embedded-fondu-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DfontSplitter-embedded-fondu-acknowledgements.plist"; sourceTree = "<group>"; };
+		3033BCFE3D30832E27E71CC7FFFBD74C /* Pods-DfontSplitter-embedded-fondu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DfontSplitter-embedded-fondu.release.xcconfig"; sourceTree = "<group>"; };
 		4481510174E6E2FD7DB5B43FE2317855 /* Pods_DfontSplitter_embedded_fondu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DfontSplitter_embedded_fondu.framework; path = "Pods-DfontSplitter-embedded-fondu.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		46B023E24F28228A4B1DA7F0B65B1D5B /* SPUDownloaderDeprecated.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloaderDeprecated.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloaderDeprecated.h; sourceTree = "<group>"; };
 		4842B12964EB03589842BCE6380DAF26 /* Pods_DfontSplitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DfontSplitter.framework; path = "Pods-DfontSplitter.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EBF24ADAE357CC36A153768D72B73F2 /* Pods-DfontSplitterTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DfontSplitterTests-dummy.m"; sourceTree = "<group>"; };
-		525D4023BFD270C8BFD4A9734783F46E /* Pods-DfontSplitter-embedded-fondu-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DfontSplitter-embedded-fondu-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5312D69A5FE358F76445CB159AD4A3E8 /* Pods-DfontSplitterUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DfontSplitterUITests.modulemap"; sourceTree = "<group>"; };
-		5AB94A3D237DBD53158CD1CD7C7F99E3 /* Pods-DfontSplitter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DfontSplitter-umbrella.h"; sourceTree = "<group>"; };
-		5EA0493939DD5E09E48F695BA561E91B /* Pods-DfontSplitterTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DfontSplitterTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		657672980F536CE9667114C4B6293662 /* Pods-DfontSplitterTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DfontSplitterTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		677040C40C27F6E4ACA8026E082A6C0F /* Pods-DfontSplitter-embedded-fondu-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DfontSplitter-embedded-fondu-Info.plist"; sourceTree = "<group>"; };
-		68C48AD56823DCD58A1A300D1D02D920 /* Pods-DfontSplitterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DfontSplitterTests.debug.xcconfig"; sourceTree = "<group>"; };
-		6FAF6F0916E6CC2351B75CB90310C55C /* Pods-DfontSplitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DfontSplitter.release.xcconfig"; sourceTree = "<group>"; };
-		75B6BAD4FC04FDB5CEFAD21C75978880 /* SPUDownloaderDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloaderDelegate.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloaderDelegate.h; sourceTree = "<group>"; };
-		7C4B85ACED8A4A539141162B46F38D5E /* SUErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUErrors.h; path = Sparkle.framework/Versions/A/Headers/SUErrors.h; sourceTree = "<group>"; };
-		7FAF57D0D1CA058D1250E6CFF45249E1 /* Pods-DfontSplitterUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DfontSplitterUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		88CBE879FF4DD55903E06901F54BDFBC /* Sparkle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Sparkle.h; path = Sparkle.framework/Versions/A/Headers/Sparkle.h; sourceTree = "<group>"; };
-		88F4FCFB757F3B57FFBEF0E6201F501D /* Pods-DfontSplitterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DfontSplitterTests.release.xcconfig"; sourceTree = "<group>"; };
-		8D2C171B7952AC08B7B65DB67042AFF7 /* Pods-DfontSplitterTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DfontSplitterTests-Info.plist"; sourceTree = "<group>"; };
-		910A15599217A7B4BE01C017685480FC /* Pods-DfontSplitter-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DfontSplitter-acknowledgements.markdown"; sourceTree = "<group>"; };
+		50CDCB2CFBE42B9093840EA8DD72EFD2 /* Pods-DfontSplitterUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DfontSplitterUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5D03C8B743A0FF85853CBEFA24D64EEF /* Pods-DfontSplitter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DfontSplitter.modulemap"; sourceTree = "<group>"; };
+		84B3C3B6EE5E7324876B60740D948CF0 /* Pods-DfontSplitterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DfontSplitterUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8BE4D5B750EA434DD649B917DDE2C215 /* Pods-DfontSplitterUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DfontSplitterUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8D6D633BFBD7ACDE59BC0C869C5278B3 /* Pods-DfontSplitter-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DfontSplitter-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9B17FBCB58AA0D52C58997B3D1438321 /* Pods-DfontSplitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DfontSplitter.release.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A1DCDD048D9768B2491A5D8089A5D831 /* SUUpdaterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUUpdaterDelegate.h; path = Sparkle.framework/Versions/A/Headers/SUUpdaterDelegate.h; sourceTree = "<group>"; };
-		A65751779175EC3C2A030031178B90A6 /* Pods-DfontSplitterUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DfontSplitterUITests-umbrella.h"; sourceTree = "<group>"; };
-		A8D51759FC12EDB9BE2ECC669775F03D /* SPUDownloaderProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloaderProtocol.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloaderProtocol.h; sourceTree = "<group>"; };
-		AB47098B18B0AA0B475BE81F48995DA3 /* SUAppcastItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUAppcastItem.h; path = Sparkle.framework/Versions/A/Headers/SUAppcastItem.h; sourceTree = "<group>"; };
-		AC1D679DFE4A295F2C0AC6C04BE57433 /* SPUDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloader.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloader.h; sourceTree = "<group>"; };
-		ACFCACB1A9A0AB52E8633CFFD7FA7B6F /* SUStandardVersionComparator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUStandardVersionComparator.h; path = Sparkle.framework/Versions/A/Headers/SUStandardVersionComparator.h; sourceTree = "<group>"; };
+		A0A65EDDB6D68D69AB975BD90F587AB5 /* Pods-DfontSplitter-embedded-fondu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DfontSplitter-embedded-fondu.debug.xcconfig"; sourceTree = "<group>"; };
+		A3E13350C8D0B40613B5361448D5C589 /* Pods-DfontSplitterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DfontSplitterTests.release.xcconfig"; sourceTree = "<group>"; };
+		A96434682BE3594ACEC364105C28D506 /* Pods-DfontSplitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DfontSplitter.debug.xcconfig"; sourceTree = "<group>"; };
+		AB69F4208447214F452A954C022A0F0C /* Pods-DfontSplitterUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DfontSplitterUITests-dummy.m"; sourceTree = "<group>"; };
 		B0C4DD6CFE748FF9F1947B5B25950565 /* Pods_DfontSplitterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DfontSplitterTests.framework; path = "Pods-DfontSplitterTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B196424AA43D4FE79F403E15E1352FA6 /* Pods-DfontSplitter-embedded-fondu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DfontSplitter-embedded-fondu.release.xcconfig"; sourceTree = "<group>"; };
-		B2F3188B56D02B5BCF05F067D0350B44 /* Pods-DfontSplitter-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DfontSplitter-Info.plist"; sourceTree = "<group>"; };
-		B452C2235CF3357430404FB138C9B236 /* Pods-DfontSplitter-embedded-fondu-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DfontSplitter-embedded-fondu-acknowledgements.plist"; sourceTree = "<group>"; };
-		C1C41C0B34DA9C481BE2B7DFE91FDA4D /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
-		C1FE5D1EC05D923EC7B0C4816C5EF449 /* SUExport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SUExport.h; path = Sparkle.framework/Versions/A/Headers/SUExport.h; sourceTree = "<group>"; };
-		CCC5084293BC7348159D195CCB8819D4 /* Pods-DfontSplitter-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DfontSplitter-frameworks.sh"; sourceTree = "<group>"; };
-		CFC3515262779D7F65D96CF63C822C7C /* Pods-DfontSplitter-embedded-fondu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DfontSplitter-embedded-fondu.modulemap"; sourceTree = "<group>"; };
-		D27C869D7D2F928CE6DC1F490CD0E9FA /* Pods-DfontSplitterUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DfontSplitterUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D7AE2D8D1F35EF1FA562783BE712C8D6 /* Pods-DfontSplitterTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DfontSplitterTests.modulemap"; sourceTree = "<group>"; };
-		DB782CC3601CE4581D2F3FB3DC5732CF /* Pods-DfontSplitter-embedded-fondu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DfontSplitter-embedded-fondu.debug.xcconfig"; sourceTree = "<group>"; };
+		B2A573BF8FE76E233913122EAE2C6A60 /* Pods-DfontSplitter-embedded-fondu-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DfontSplitter-embedded-fondu-Info.plist"; sourceTree = "<group>"; };
+		B2ADF1686CDA623374006F70D8C474CA /* Pods-DfontSplitterTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DfontSplitterTests-dummy.m"; sourceTree = "<group>"; };
+		B7D84F4467CEB7C5DFE722DEDA29B1C8 /* Pods-DfontSplitterUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DfontSplitterUITests-Info.plist"; sourceTree = "<group>"; };
+		C11AB8576F6FDEEE2D945A4393DE8A64 /* Pods-DfontSplitter-embedded-fondu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DfontSplitter-embedded-fondu-dummy.m"; sourceTree = "<group>"; };
+		CD8F591E081EEF9B59865524A10161E4 /* Pods-DfontSplitter-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DfontSplitter-acknowledgements.plist"; sourceTree = "<group>"; };
+		D4D079136A88FF15F7BC66EB569100B7 /* Pods-DfontSplitter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DfontSplitter-dummy.m"; sourceTree = "<group>"; };
+		D7B66738BD35DD45E9CA9A7D86DD2772 /* Pods-DfontSplitterTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DfontSplitterTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DD5A7EAE446CBADDC63A25714A416CD7 /* Pods-DfontSplitterTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DfontSplitterTests-Info.plist"; sourceTree = "<group>"; };
 		E0D8C4AE075A4F0C2DE5BC8330C71994 /* Pods_DfontSplitterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DfontSplitterUITests.framework; path = "Pods-DfontSplitterUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5A710B46FF7C977041D3A5FB03B3C7F /* SPUDownloadData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SPUDownloadData.h; path = Sparkle.framework/Versions/A/Headers/SPUDownloadData.h; sourceTree = "<group>"; };
-		E7D6D29BF202BE7D380AD28814E52B6C /* Pods-DfontSplitterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DfontSplitterUITests.release.xcconfig"; sourceTree = "<group>"; };
-		EC240F6E36EF62FE39E12684FFEE864D /* Pods-DfontSplitterUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DfontSplitterUITests-Info.plist"; sourceTree = "<group>"; };
-		EE21950F9CADCCF03C5DADAD1AE0FD6A /* Pods-DfontSplitter-embedded-fondu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DfontSplitter-embedded-fondu-dummy.m"; sourceTree = "<group>"; };
-		F47C45E3E2DCCCCE8DD506311E28B894 /* Pods-DfontSplitter-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DfontSplitter-acknowledgements.plist"; sourceTree = "<group>"; };
+		E52E1FB49E5DE100A40CA58A2BE4431D /* Pods-DfontSplitter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DfontSplitter-umbrella.h"; sourceTree = "<group>"; };
+		F3F14057334EF9EBFC714D9EA398C030 /* Pods-DfontSplitter-embedded-fondu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DfontSplitter-embedded-fondu.modulemap"; sourceTree = "<group>"; };
+		F8F3FD29AF1D0CFBC121ACDD1DE461E3 /* Pods-DfontSplitter-embedded-fondu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DfontSplitter-embedded-fondu-umbrella.h"; sourceTree = "<group>"; };
 		F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		FE16EB6A3AA03134C5F0593FA723EA40 /* Pods-DfontSplitter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DfontSplitter-dummy.m"; sourceTree = "<group>"; };
-		FEC9557F44F21F229C7701644C6FE004 /* Pods-DfontSplitter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DfontSplitter.modulemap"; sourceTree = "<group>"; };
+		FC98270829AFA6EEEE9C1122269F9685 /* Pods-DfontSplitterTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DfontSplitterTests-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +85,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE5647109E8B6ED64A57FCC9ACF8DCEE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22A91C17A8F0C7B3CDF23952E01EB692 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE13A7F385BD76A4F302EF5B14B6842C /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,17 +112,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C3BDEBAF581D711E4AECE9B783AA133E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9B153B2F2D5FE1BE21AC87DCB0A9070F /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12E42AE422FDE78A7217FBA5B3C245E5 /* Pods-DfontSplitter-embedded-fondu */ = {
+			isa = PBXGroup;
+			children = (
+				F3F14057334EF9EBFC714D9EA398C030 /* Pods-DfontSplitter-embedded-fondu.modulemap */,
+				1D6AC3918715E7BA91E54A750179968A /* Pods-DfontSplitter-embedded-fondu-acknowledgements.markdown */,
+				2C54EADDA6B7D5656DE45A1BEEA3CC85 /* Pods-DfontSplitter-embedded-fondu-acknowledgements.plist */,
+				C11AB8576F6FDEEE2D945A4393DE8A64 /* Pods-DfontSplitter-embedded-fondu-dummy.m */,
+				B2A573BF8FE76E233913122EAE2C6A60 /* Pods-DfontSplitter-embedded-fondu-Info.plist */,
+				F8F3FD29AF1D0CFBC121ACDD1DE461E3 /* Pods-DfontSplitter-embedded-fondu-umbrella.h */,
+				A0A65EDDB6D68D69AB975BD90F587AB5 /* Pods-DfontSplitter-embedded-fondu.debug.xcconfig */,
+				3033BCFE3D30832E27E71CC7FFFBD74C /* Pods-DfontSplitter-embedded-fondu.release.xcconfig */,
+			);
+			name = "Pods-DfontSplitter-embedded-fondu";
+			path = "Target Support Files/Pods-DfontSplitter-embedded-fondu";
+			sourceTree = "<group>";
+		};
+		13ECA8F33CCDF811BD795A11C9CCFC53 /* Pods-DfontSplitterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0BC63463DA7F77683EF64C4E0B8FB3D2 /* Pods-DfontSplitterUITests.modulemap */,
+				50CDCB2CFBE42B9093840EA8DD72EFD2 /* Pods-DfontSplitterUITests-acknowledgements.markdown */,
+				8BE4D5B750EA434DD649B917DDE2C215 /* Pods-DfontSplitterUITests-acknowledgements.plist */,
+				AB69F4208447214F452A954C022A0F0C /* Pods-DfontSplitterUITests-dummy.m */,
+				B7D84F4467CEB7C5DFE722DEDA29B1C8 /* Pods-DfontSplitterUITests-Info.plist */,
+				1CE1E11B23BCD1C1BB14315E99CA268C /* Pods-DfontSplitterUITests-umbrella.h */,
+				1C633C7FBD7CC2EC2944EBE6492F334E /* Pods-DfontSplitterUITests.debug.xcconfig */,
+				84B3C3B6EE5E7324876B60740D948CF0 /* Pods-DfontSplitterUITests.release.xcconfig */,
+			);
+			name = "Pods-DfontSplitterUITests";
+			path = "Target Support Files/Pods-DfontSplitterUITests";
+			sourceTree = "<group>";
+		};
 		22F23BA9BB8747BE207D53200BBEDBBE /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,125 +158,47 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2F19D4B4E5D83C12FC10BE6A865E7BDE /* Pods-DfontSplitterTests */ = {
+		7C71232B2C8B8F01AFAF4432586FB4EF /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D7AE2D8D1F35EF1FA562783BE712C8D6 /* Pods-DfontSplitterTests.modulemap */,
-				5EA0493939DD5E09E48F695BA561E91B /* Pods-DfontSplitterTests-acknowledgements.markdown */,
-				657672980F536CE9667114C4B6293662 /* Pods-DfontSplitterTests-acknowledgements.plist */,
-				4EBF24ADAE357CC36A153768D72B73F2 /* Pods-DfontSplitterTests-dummy.m */,
-				8D2C171B7952AC08B7B65DB67042AFF7 /* Pods-DfontSplitterTests-Info.plist */,
-				19805161A891904FEBF588D3D8FEB5E1 /* Pods-DfontSplitterTests-umbrella.h */,
-				68C48AD56823DCD58A1A300D1D02D920 /* Pods-DfontSplitterTests.debug.xcconfig */,
-				88F4FCFB757F3B57FFBEF0E6201F501D /* Pods-DfontSplitterTests.release.xcconfig */,
+				CB4B311C606597CE9082A67B3AC6F41E /* Pods-DfontSplitter */,
+				12E42AE422FDE78A7217FBA5B3C245E5 /* Pods-DfontSplitter-embedded-fondu */,
+				A6F0B1854D73F3B42A3CBB17E46891EB /* Pods-DfontSplitterTests */,
+				13ECA8F33CCDF811BD795A11C9CCFC53 /* Pods-DfontSplitterUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A6F0B1854D73F3B42A3CBB17E46891EB /* Pods-DfontSplitterTests */ = {
+			isa = PBXGroup;
+			children = (
+				1A46729205084906EEB86F2808BF320A /* Pods-DfontSplitterTests.modulemap */,
+				D7B66738BD35DD45E9CA9A7D86DD2772 /* Pods-DfontSplitterTests-acknowledgements.markdown */,
+				FC98270829AFA6EEEE9C1122269F9685 /* Pods-DfontSplitterTests-acknowledgements.plist */,
+				B2ADF1686CDA623374006F70D8C474CA /* Pods-DfontSplitterTests-dummy.m */,
+				DD5A7EAE446CBADDC63A25714A416CD7 /* Pods-DfontSplitterTests-Info.plist */,
+				004BDA617DE886FCC0F8B73904456D70 /* Pods-DfontSplitterTests-umbrella.h */,
+				16EC878E0357A3437A52DE4C4EDA852F /* Pods-DfontSplitterTests.debug.xcconfig */,
+				A3E13350C8D0B40613B5361448D5C589 /* Pods-DfontSplitterTests.release.xcconfig */,
 			);
 			name = "Pods-DfontSplitterTests";
 			path = "Target Support Files/Pods-DfontSplitterTests";
 			sourceTree = "<group>";
 		};
-		3EB1D68CDBC5793A10C4C0E4CFC2869B /* Pods-DfontSplitter */ = {
+		CB4B311C606597CE9082A67B3AC6F41E /* Pods-DfontSplitter */ = {
 			isa = PBXGroup;
 			children = (
-				FEC9557F44F21F229C7701644C6FE004 /* Pods-DfontSplitter.modulemap */,
-				910A15599217A7B4BE01C017685480FC /* Pods-DfontSplitter-acknowledgements.markdown */,
-				F47C45E3E2DCCCCE8DD506311E28B894 /* Pods-DfontSplitter-acknowledgements.plist */,
-				FE16EB6A3AA03134C5F0593FA723EA40 /* Pods-DfontSplitter-dummy.m */,
-				CCC5084293BC7348159D195CCB8819D4 /* Pods-DfontSplitter-frameworks.sh */,
-				B2F3188B56D02B5BCF05F067D0350B44 /* Pods-DfontSplitter-Info.plist */,
-				5AB94A3D237DBD53158CD1CD7C7F99E3 /* Pods-DfontSplitter-umbrella.h */,
-				061612F781DEEEDDF94036F818AB2213 /* Pods-DfontSplitter.debug.xcconfig */,
-				6FAF6F0916E6CC2351B75CB90310C55C /* Pods-DfontSplitter.release.xcconfig */,
+				5D03C8B743A0FF85853CBEFA24D64EEF /* Pods-DfontSplitter.modulemap */,
+				8D6D633BFBD7ACDE59BC0C869C5278B3 /* Pods-DfontSplitter-acknowledgements.markdown */,
+				CD8F591E081EEF9B59865524A10161E4 /* Pods-DfontSplitter-acknowledgements.plist */,
+				D4D079136A88FF15F7BC66EB569100B7 /* Pods-DfontSplitter-dummy.m */,
+				022DED31EC55809CC272F9D5DDDACAC6 /* Pods-DfontSplitter-Info.plist */,
+				E52E1FB49E5DE100A40CA58A2BE4431D /* Pods-DfontSplitter-umbrella.h */,
+				A96434682BE3594ACEC364105C28D506 /* Pods-DfontSplitter.debug.xcconfig */,
+				9B17FBCB58AA0D52C58997B3D1438321 /* Pods-DfontSplitter.release.xcconfig */,
 			);
 			name = "Pods-DfontSplitter";
 			path = "Target Support Files/Pods-DfontSplitter";
-			sourceTree = "<group>";
-		};
-		458F5FE2377A7011FB8CD827A459EE5A /* Sparkle */ = {
-			isa = PBXGroup;
-			children = (
-				88CBE879FF4DD55903E06901F54BDFBC /* Sparkle.h */,
-				E5A710B46FF7C977041D3A5FB03B3C7F /* SPUDownloadData.h */,
-				AC1D679DFE4A295F2C0AC6C04BE57433 /* SPUDownloader.h */,
-				75B6BAD4FC04FDB5CEFAD21C75978880 /* SPUDownloaderDelegate.h */,
-				46B023E24F28228A4B1DA7F0B65B1D5B /* SPUDownloaderDeprecated.h */,
-				A8D51759FC12EDB9BE2ECC669775F03D /* SPUDownloaderProtocol.h */,
-				0332A469918DDC7200DC05857FD3100A /* SPUDownloaderSession.h */,
-				23A4C129EAD89A35261E5FE317CC8171 /* SPUURLRequest.h */,
-				399C150840A1C2150618FB5BFE42DA9C /* SUAppcast.h */,
-				AB47098B18B0AA0B475BE81F48995DA3 /* SUAppcastItem.h */,
-				2179011B680B8576C8D36EA8FCFDCF1F /* SUCodeSigningVerifier.h */,
-				7C4B85ACED8A4A539141162B46F38D5E /* SUErrors.h */,
-				C1FE5D1EC05D923EC7B0C4816C5EF449 /* SUExport.h */,
-				ACFCACB1A9A0AB52E8633CFFD7FA7B6F /* SUStandardVersionComparator.h */,
-				4141435D9975E8E9CDCC84B3A32156A8 /* SUUpdater.h */,
-				A1DCDD048D9768B2491A5D8089A5D831 /* SUUpdaterDelegate.h */,
-				05C8EC1E598BF8EFC6CE546C9CA3C3A2 /* SUVersionComparisonProtocol.h */,
-				20B1BA6068BA2FBD15C3EA42CC318BBE /* SUVersionDisplayProtocol.h */,
-				F27610214F2DFB81D3505CB8D0773C27 /* Frameworks */,
-				9D967989E3894A7199B4724025FA7425 /* Support Files */,
-			);
-			name = Sparkle;
-			path = Sparkle;
-			sourceTree = "<group>";
-		};
-		74924609A5200EB49EE32720C989B12D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				458F5FE2377A7011FB8CD827A459EE5A /* Sparkle */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		7EBFCBC6AE84AE2B85DDEBDE9A0E990A /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3EB1D68CDBC5793A10C4C0E4CFC2869B /* Pods-DfontSplitter */,
-				AFF620124E6F443D53899678CB8E1A5A /* Pods-DfontSplitter-embedded-fondu */,
-				2F19D4B4E5D83C12FC10BE6A865E7BDE /* Pods-DfontSplitterTests */,
-				BD009D09EA1BC5545048177553791280 /* Pods-DfontSplitterUITests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		9D967989E3894A7199B4724025FA7425 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				164A58EB240E3D712158E07256E9D04C /* Sparkle.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Sparkle";
-			sourceTree = "<group>";
-		};
-		AFF620124E6F443D53899678CB8E1A5A /* Pods-DfontSplitter-embedded-fondu */ = {
-			isa = PBXGroup;
-			children = (
-				CFC3515262779D7F65D96CF63C822C7C /* Pods-DfontSplitter-embedded-fondu.modulemap */,
-				525D4023BFD270C8BFD4A9734783F46E /* Pods-DfontSplitter-embedded-fondu-acknowledgements.markdown */,
-				B452C2235CF3357430404FB138C9B236 /* Pods-DfontSplitter-embedded-fondu-acknowledgements.plist */,
-				EE21950F9CADCCF03C5DADAD1AE0FD6A /* Pods-DfontSplitter-embedded-fondu-dummy.m */,
-				677040C40C27F6E4ACA8026E082A6C0F /* Pods-DfontSplitter-embedded-fondu-Info.plist */,
-				3B3DD6263DF9C5F805119B84CE570419 /* Pods-DfontSplitter-embedded-fondu-umbrella.h */,
-				DB782CC3601CE4581D2F3FB3DC5732CF /* Pods-DfontSplitter-embedded-fondu.debug.xcconfig */,
-				B196424AA43D4FE79F403E15E1352FA6 /* Pods-DfontSplitter-embedded-fondu.release.xcconfig */,
-			);
-			name = "Pods-DfontSplitter-embedded-fondu";
-			path = "Target Support Files/Pods-DfontSplitter-embedded-fondu";
-			sourceTree = "<group>";
-		};
-		BD009D09EA1BC5545048177553791280 /* Pods-DfontSplitterUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5312D69A5FE358F76445CB159AD4A3E8 /* Pods-DfontSplitterUITests.modulemap */,
-				D27C869D7D2F928CE6DC1F490CD0E9FA /* Pods-DfontSplitterUITests-acknowledgements.markdown */,
-				7FAF57D0D1CA058D1250E6CFF45249E1 /* Pods-DfontSplitterUITests-acknowledgements.plist */,
-				0094BE461E8E776F8C9BCBF6B55F1EAD /* Pods-DfontSplitterUITests-dummy.m */,
-				EC240F6E36EF62FE39E12684FFEE864D /* Pods-DfontSplitterUITests-Info.plist */,
-				A65751779175EC3C2A030031178B90A6 /* Pods-DfontSplitterUITests-umbrella.h */,
-				31999744CB19D20926472B6B719A81DD /* Pods-DfontSplitterUITests.debug.xcconfig */,
-				E7D6D29BF202BE7D380AD28814E52B6C /* Pods-DfontSplitterUITests.release.xcconfig */,
-			);
-			name = "Pods-DfontSplitterUITests";
-			path = "Target Support Files/Pods-DfontSplitterUITests";
 			sourceTree = "<group>";
 		};
 		CBD43E0947D94E318A0ED1350CFF29ED /* OS X */ = {
@@ -300,9 +214,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				E0A1E60606E0BF6E2E10F1F01350DFE8 /* Frameworks */,
-				74924609A5200EB49EE32720C989B12D /* Pods */,
 				22F23BA9BB8747BE207D53200BBEDBBE /* Products */,
-				7EBFCBC6AE84AE2B85DDEBDE9A0E990A /* Targets Support Files */,
+				7C71232B2C8B8F01AFAF4432586FB4EF /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -310,14 +223,6 @@
 			isa = PBXGroup;
 			children = (
 				CBD43E0947D94E318A0ED1350CFF29ED /* OS X */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F27610214F2DFB81D3505CB8D0773C27 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C1C41C0B34DA9C481BE2B7DFE91FDA4D /* Sparkle.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -333,11 +238,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B7415BF5303153E4597DAFE2F59FA624 /* Headers */ = {
+		B5125597FA8121EB73B97566B9395230 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECA9CD60CF61F4187F4AC1F63B6A8CE7 /* Pods-DfontSplitter-umbrella.h in Headers */,
+				56B837E1DD6E75C49CE6CD83DD2DA2F7 /* Pods-DfontSplitter-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,17 +267,16 @@
 /* Begin PBXNativeTarget section */
 		11EE31AE46999A2713D4730A6BCFC10E /* Pods-DfontSplitter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A02CDD1E942C9E2AD4D9FDD070D1ABF /* Build configuration list for PBXNativeTarget "Pods-DfontSplitter" */;
+			buildConfigurationList = 16020BFF35240AEE6113829541D2430B /* Build configuration list for PBXNativeTarget "Pods-DfontSplitter" */;
 			buildPhases = (
-				B7415BF5303153E4597DAFE2F59FA624 /* Headers */,
-				8C6488D53BA13DDE65916A9AED08870F /* Sources */,
-				C3BDEBAF581D711E4AECE9B783AA133E /* Frameworks */,
-				C194DD0317BFDDF667A55FECF8038B5B /* Resources */,
+				B5125597FA8121EB73B97566B9395230 /* Headers */,
+				2D5FA530E1BAE8B564CAE6A11844572D /* Sources */,
+				22A91C17A8F0C7B3CDF23952E01EB692 /* Frameworks */,
+				5F5EB13B02777A63C76EE842131821DC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8A54836B3DCB22E54F74B0C422391A92 /* PBXTargetDependency */,
 			);
 			name = "Pods-DfontSplitter";
 			productName = "Pods-DfontSplitter";
@@ -445,7 +349,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -460,7 +364,6 @@
 				BB6CC05161130437E490A33BDF5D69DA /* Pods-DfontSplitter-embedded-fondu */,
 				D6BCA698A96077748E51A63AABA5054F /* Pods-DfontSplitterTests */,
 				5EC21D19EE3CEEDE0C7B5AEBDA46EE80 /* Pods-DfontSplitterUITests */,
-				ED77B4B88587C894E85C361023D67C53 /* Sparkle */,
 			);
 		};
 /* End PBXProject section */
@@ -473,14 +376,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6F2267BED1E14B7FD0BACF5254939E81 /* Resources */ = {
+		5F5EB13B02777A63C76EE842131821DC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C194DD0317BFDDF667A55FECF8038B5B /* Resources */ = {
+		6F2267BED1E14B7FD0BACF5254939E81 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -505,11 +408,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C6488D53BA13DDE65916A9AED08870F /* Sources */ = {
+		2D5FA530E1BAE8B564CAE6A11844572D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0910D0A76D0D84905037AD97039481E /* Pods-DfontSplitter-dummy.m in Sources */,
+				50CAF6B44FF280C829F83E27E342C2F2 /* Pods-DfontSplitter-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,18 +447,12 @@
 			target = 11EE31AE46999A2713D4730A6BCFC10E /* Pods-DfontSplitter */;
 			targetProxy = 5183D955EABCAF52CA072F53D81F8B49 /* PBXContainerItemProxy */;
 		};
-		8A54836B3DCB22E54F74B0C422391A92 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Sparkle;
-			target = ED77B4B88587C894E85C361023D67C53 /* Sparkle */;
-			targetProxy = F9C8B269F9D29EB47B797269DE951835 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		07D2DB92EF7B54C45D4388DD68D6FCA3 /* Debug */ = {
+		08E9C048BCAE15CBFD762DBD3276635C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 061612F781DEEEDDF94036F818AB2213 /* Pods-DfontSplitter.debug.xcconfig */;
+			baseConfigurationReference = A96434682BE3594ACEC364105C28D506 /* Pods-DfontSplitter.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -593,26 +490,9 @@
 			};
 			name = Debug;
 		};
-		21221507EB6C5017FA40BD87C8A5AE87 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 164A58EB240E3D712158E07256E9D04C /* Sparkle.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
 		25753691DA9580FB499F584395BF51AE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68C48AD56823DCD58A1A300D1D02D920 /* Pods-DfontSplitterTests.debug.xcconfig */;
+			baseConfigurationReference = 16EC878E0357A3437A52DE4C4EDA852F /* Pods-DfontSplitterTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -652,7 +532,7 @@
 		};
 		3BC89AE64CD13C2600E918AA8DA4FBAF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B196424AA43D4FE79F403E15E1352FA6 /* Pods-DfontSplitter-embedded-fondu.release.xcconfig */;
+			baseConfigurationReference = 3033BCFE3D30832E27E71CC7FFFBD74C /* Pods-DfontSplitter-embedded-fondu.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -756,7 +636,7 @@
 		};
 		48E801F979ECF5A303402A2A3F689B10 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88F4FCFB757F3B57FFBEF0E6201F501D /* Pods-DfontSplitterTests.release.xcconfig */;
+			baseConfigurationReference = A3E13350C8D0B40613B5361448D5C589 /* Pods-DfontSplitterTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -854,26 +734,9 @@
 			};
 			name = Release;
 		};
-		5AFD67EFA6B3F27B4F0B0F8027C335F7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 164A58EB240E3D712158E07256E9D04C /* Sparkle.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
 		71476A0EF0062DC903438D571DD34428 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB782CC3601CE4581D2F3FB3DC5732CF /* Pods-DfontSplitter-embedded-fondu.debug.xcconfig */;
+			baseConfigurationReference = A0A65EDDB6D68D69AB975BD90F587AB5 /* Pods-DfontSplitter-embedded-fondu.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -913,7 +776,7 @@
 		};
 		79E9D6509DAEA8C807F52E157A00BF42 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31999744CB19D20926472B6B719A81DD /* Pods-DfontSplitterUITests.debug.xcconfig */;
+			baseConfigurationReference = 1C633C7FBD7CC2EC2944EBE6492F334E /* Pods-DfontSplitterUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -951,9 +814,9 @@
 			};
 			name = Debug;
 		};
-		8162F71AA8ED828F8C3293C870F6B19B /* Release */ = {
+		ABE36B246372550540225EC59A43382E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6FAF6F0916E6CC2351B75CB90310C55C /* Pods-DfontSplitter.release.xcconfig */;
+			baseConfigurationReference = 9B17FBCB58AA0D52C58997B3D1438321 /* Pods-DfontSplitter.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -993,7 +856,7 @@
 		};
 		EE137911E2BAD334E3C63C556B4D6068 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7D6D29BF202BE7D380AD28814E52B6C /* Pods-DfontSplitterUITests.release.xcconfig */;
+			baseConfigurationReference = 84B3C3B6EE5E7324876B60740D948CF0 /* Pods-DfontSplitterUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -1034,11 +897,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2C8D06A2289713323892B3638F08AC0B /* Build configuration list for PBXAggregateTarget "Sparkle" */ = {
+		16020BFF35240AEE6113829541D2430B /* Build configuration list for PBXNativeTarget "Pods-DfontSplitter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5AFD67EFA6B3F27B4F0B0F8027C335F7 /* Debug */,
-				21221507EB6C5017FA40BD87C8A5AE87 /* Release */,
+				08E9C048BCAE15CBFD762DBD3276635C /* Debug */,
+				ABE36B246372550540225EC59A43382E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1048,15 +911,6 @@
 			buildConfigurations = (
 				79E9D6509DAEA8C807F52E157A00BF42 /* Debug */,
 				EE137911E2BAD334E3C63C556B4D6068 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3A02CDD1E942C9E2AD4D9FDD070D1ABF /* Build configuration list for PBXNativeTarget "Pods-DfontSplitter" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				07D2DB92EF7B54C45D4388DD68D6FCA3 /* Debug */,
-				8162F71AA8ED828F8C3293C870F6B19B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
