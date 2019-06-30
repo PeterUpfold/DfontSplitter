@@ -22,12 +22,6 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Check for Updates…" id="anr-ax-Mck">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="checkForUpdates:" target="QVi-uY-xMm" id="kkG-pg-UqS"/>
-                                            </connections>
-                                        </menuItem>
                                         <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                                         <menuItem title="Services" id="NMo-om-nkz">
@@ -683,7 +677,6 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="DfontSplitter" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <customObject id="QVi-uY-xMm" customClass="SUUpdater"/>
             </objects>
             <point key="canvasLocation" x="32" y="-127"/>
         </scene>
