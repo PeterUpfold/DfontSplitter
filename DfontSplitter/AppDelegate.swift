@@ -27,6 +27,7 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    var preferencesWindowController: NSWindowController?
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -38,6 +39,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
 
-
+    @IBAction func openPreferences(_ sender: Any) {
+        if (preferencesWindowController == nil) {
+            let storyboard = NSStoryboard(name: "Preferences", bundle: nil)
+            debugPrint("storyboard: \(storyboard)")
+            preferencesWindowController = storyboard.instantiateController(withIdentifier: "Preferences") as? NSWindowController
+            debugPrint("preferencesWindowController: \(preferencesWindowController)")
+        }
+        
+        if (preferencesWindowController != nil) {
+            preferencesWindowController!.showWindow(sender)
+        }
+        
+    }
+    
 }
 

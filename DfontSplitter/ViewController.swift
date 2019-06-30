@@ -35,8 +35,6 @@ class ViewController: NSViewController {
         // Do any additional setup after loading the view.
         //pathControl.stringValue = FileManager.default.homeDirectoryForCurrentUser.absoluteString // sandboxing makes this path ugly and not the home folder :(
         
-        let window = NSApp.mainWindow
-        
     }
     
     override func viewDidAppear() {
@@ -193,8 +191,6 @@ class ViewController: NSViewController {
     @IBOutlet weak var arrayController: NSArrayController!
     
     @IBOutlet weak var pathControl: NSPathControl!
-    
-    @IBOutlet weak var window: NSWindow!
     
     @IBOutlet weak var statusLabel: NSTextField!
     

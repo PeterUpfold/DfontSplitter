@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,6 +25,9 @@
 		D0DDA4A522C8828E00A113B7 /* stripttc.c in Sources */ = {isa = PBXBuildFile; fileRef = D0DDA4A322C8828E00A113B7 /* stripttc.c */; };
 		D0DDA4A922C88AF700A113B7 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D0DDA4A822C88AF600A113B7 /* Podfile */; };
 		D0FA4EC722C88F4B00FCC02B /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = D0FA4EC622C88F4900FCC02B /* dsa_pub.pem */; };
+		D0FA4EC922C9167800FCC02B /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0FA4EC822C9167800FCC02B /* Preferences.storyboard */; };
+		D0FA4ECB22C917B400FCC02B /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FA4ECA22C917B400FCC02B /* PreferencesViewController.swift */; };
+		D0FA4ECD22C91A9D00FCC02B /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FA4ECC22C91A9D00FCC02B /* PreferencesWindowController.swift */; };
 		F73BA3AA2A55D4F104D4DE43 /* Pods_DfontSplitterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CBE25D22AE99E0F157535A /* Pods_DfontSplitterTests.framework */; };
 		F9A9BF9CBF8231A21442174F /* Pods_DfontSplitter_embedded_fondu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2EBC7485C72BD97EBC13803 /* Pods_DfontSplitter_embedded_fondu.framework */; };
 /* End PBXBuildFile section */
@@ -132,6 +135,9 @@
 		D0DDA4A322C8828E00A113B7 /* stripttc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = stripttc.c; sourceTree = "<group>"; };
 		D0DDA4A822C88AF600A113B7 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		D0FA4EC622C88F4900FCC02B /* dsa_pub.pem */ = {isa = PBXFileReference; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		D0FA4EC822C9167800FCC02B /* Preferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
+		D0FA4ECA22C917B400FCC02B /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		D0FA4ECC22C91A9D00FCC02B /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
 		D9A13CC1AE96D971FD71B056 /* Pods-DfontSplitter-embedded-fondu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DfontSplitter-embedded-fondu.release.xcconfig"; path = "Pods/Target Support Files/Pods-DfontSplitter-embedded-fondu/Pods-DfontSplitter-embedded-fondu.release.xcconfig"; sourceTree = "<group>"; };
 		DC99AE0B973E171FA53A2F9D /* Pods-DfontSplitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DfontSplitter.release.xcconfig"; path = "Pods/Target Support Files/Pods-DfontSplitter/Pods-DfontSplitter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -265,6 +271,7 @@
 		D087A54E219567B2003C24DA /* DfontSplitter */ = {
 			isa = PBXGroup;
 			children = (
+				D0FA4EC822C9167800FCC02B /* Preferences.storyboard */,
 				D0DDA4A122C8826800A113B7 /* fontforge-tools */,
 				D003553A2280497B00159AD6 /* DfontSplitter-embedded-fondu */,
 				D00DAC0B228046310069B1E2 /* DfontSplitter-embedded-fondu-Bridging-Header.h */,
@@ -275,6 +282,8 @@
 				D087A558219567B4003C24DA /* Info.plist */,
 				D087A559219567B4003C24DA /* DfontSplitter.entitlements */,
 				D09306D92203A6D100D939E6 /* DragDropTableView.swift */,
+				D0FA4ECA22C917B400FCC02B /* PreferencesViewController.swift */,
+				D0FA4ECC22C91A9D00FCC02B /* PreferencesWindowController.swift */,
 			);
 			path = DfontSplitter;
 			sourceTree = "<group>";
@@ -472,6 +481,7 @@
 				D0DDA4A922C88AF700A113B7 /* Podfile in Resources */,
 				D087A554219567B4003C24DA /* Assets.xcassets in Resources */,
 				D0FA4EC722C88F4B00FCC02B /* dsa_pub.pem in Resources */,
+				D0FA4EC922C9167800FCC02B /* Preferences.storyboard in Resources */,
 				D087A557219567B4003C24DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -591,8 +601,10 @@
 				D087A552219567B2003C24DA /* ViewController.swift in Sources */,
 				D087A550219567B2003C24DA /* AppDelegate.swift in Sources */,
 				D0035565228049BC00159AD6 /* fondu.c in Sources */,
+				D0FA4ECB22C917B400FCC02B /* PreferencesViewController.swift in Sources */,
 				D0DDA4A522C8828E00A113B7 /* stripttc.c in Sources */,
 				D0035564228049B900159AD6 /* fondups.c in Sources */,
+				D0FA4ECD22C91A9D00FCC02B /* PreferencesWindowController.swift in Sources */,
 				D0035566228049DF00159AD6 /* readnfnt.c in Sources */,
 				D09306DA2203A6D100D939E6 /* DragDropTableView.swift in Sources */,
 			);
