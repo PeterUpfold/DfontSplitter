@@ -84,14 +84,10 @@ class ViewController: NSViewController {
                 debugPrint("fondu returned \(returnValue)")
             }
             else if (fileIsTTC(file: fileURL)) {
-//                let alert = NSAlert()
-//                alert.messageText = "TTC splitting not implemented for “\(file)”."
-//                alert.informativeText = "DfontSplitter has not had TTC splitting implemented."
-//                alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: nil)
-                
                 let returnValue = handlefile(unsafeMutablePointerOfFilename)
                 
                 debugPrint("stripttc returned \(returnValue)")
+       
             }
             else {
                 let alert = NSAlert()
@@ -147,7 +143,6 @@ class ViewController: NSViewController {
     }
     
     
-    // Returns number of files copied (1, or 0)
     func maybeOverwriteFileWithPrompt(question: String, text: String, file: URL, destination: URL) -> Void {
         let alert = NSAlert()
         alert.messageText = question

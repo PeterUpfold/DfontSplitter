@@ -1,0 +1,6 @@
+framework module Pods_DfontSplitterTests {
+  umbrella header "Pods-DfontSplitterTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
