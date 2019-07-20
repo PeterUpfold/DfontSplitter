@@ -26,7 +26,7 @@
 import Cocoa
 
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSWindowDelegate {
     
    
     override func viewDidLoad() {
@@ -37,8 +37,13 @@ class ViewController: NSViewController {
         
     }
     
+    func windowWillClose(_ notification: Notification) {
+        NSApplication.shared.terminate(self)
+    }
+    
     override func viewDidAppear() {
         super.viewDidAppear()
+        self.view.window?.delegate = self
         self.view.window?.title = "DfontSplitter"
         self.view.window?.representedURL = nil
     }
