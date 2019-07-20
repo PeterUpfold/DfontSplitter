@@ -1140,12 +1140,15 @@ return( false );
     spt = strrchr(filename,'/');
     if ( spt==NULL ) spt = filename;
     pt = strrchr(spt,'.');
+    
+    /* BIN checking */
     if ( pt!=NULL && (pt[1]=='b' || pt[1]=='B') && (pt[2]=='i' || pt[2]=='I') &&
 	    (pt[3]=='n' || pt[3]=='N') && pt[4]=='\0' ) {
 	if ( IsResourceInBinary(f,filename,psfont)) {
 	    fclose(f);
 return( true );
 	}
+        /* HQX checking */
     } else if ( pt!=NULL && (pt[1]=='h' || pt[1]=='H') && (pt[2]=='q' || pt[2]=='Q') &&
 	    (pt[3]=='x' || pt[3]=='X') && pt[4]=='\0' ) {
 	if ( IsResourceInHex(f,filename,psfont)) {
