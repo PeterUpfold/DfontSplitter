@@ -205,6 +205,12 @@ class ViewController: NSViewController {
     @IBOutlet weak var statusLabel: NSTextField!
     
     @IBAction func addFileToSourceFonts(_ sender: Any) {
+        arrayController.addObject("Added with button \(Date())")
+    }
+    
+    @IBAction func removeFromSourceFonts(_ sender: Any) {
+        debugPrint(" \(arrayController!.selectionIndex)")
+        arrayController.remove(atArrangedObjectIndex: arrayController!.selectionIndex)
     }
 }
 

@@ -764,7 +764,7 @@
                                                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                                     <connections>
-                                                                                        <binding destination="stJ-t0-ACz" name="value" keyPath="objectValue" id="Ijk-e0-RDB"/>
+                                                                                        <binding destination="stJ-t0-ACz" name="value" keyPath="objectValue" id="7A7-FO-6lP"/>
                                                                                     </connections>
                                                                                 </textFieldCell>
                                                                             </textField>
@@ -774,12 +774,11 @@
                                                                         </connections>
                                                                     </tableCellView>
                                                                 </prototypeCellViews>
-                                                                <connections>
-                                                                    <binding destination="acr-SD-VeR" name="value" keyPath="arrangedObjects" id="HKX-Kh-yS2"/>
-                                                                </connections>
                                                             </tableColumn>
                                                         </tableColumns>
                                                         <connections>
+                                                            <binding destination="acr-SD-VeR" name="content" keyPath="arrangedObjects" id="29h-BM-zJS"/>
+                                                            <binding destination="acr-SD-VeR" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="29h-BM-zJS" id="2Nt-rd-Ndu"/>
                                                             <outlet property="delegate" destination="XfG-lQ-9wD" id="5qk-gJ-xNF"/>
                                                         </connections>
                                                     </tableView>
@@ -813,8 +812,7 @@
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="remove:" target="acr-SD-VeR" id="BEs-Z4-mwf"/>
-                                                <binding destination="acr-SD-VeR" name="enabled" keyPath="canRemove" id="giX-P4-PQt"/>
+                                                <action selector="removeFromSourceFonts:" target="XfG-lQ-9wD" id="HRJ-IV-yNA"/>
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cLR-2p-ghn">
