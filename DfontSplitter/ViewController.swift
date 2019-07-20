@@ -205,7 +205,15 @@ class ViewController: NSViewController {
     @IBOutlet weak var statusLabel: NSTextField!
     
     @IBAction func addFileToSourceFonts(_ sender: Any) {
-        arrayController.addObject("Added with button \(Date())")
+        
+        let dialogue = NSOpenPanel()
+        dialogue.allowedFileTypes = ["com.apple.font-suitcase","com.apple.truetype-datafork-suitcase-font","public.truetype-collection-font"]
+        
+        if (dialogue.runModal() == NSApplication.ModalResponse.OK) {
+            arrayController.addObject(dialogue.url!.path)
+        }
+        
+        
     }
     
     @IBAction func removeFromSourceFonts(_ sender: Any) {
