@@ -145,7 +145,6 @@ class ViewController: NSViewController, NSWindowDelegate {
                             destination: destination)
                     }
                     else {
-                        pendingOperations += 1;
                         do {
                             try FileManager.default.copyItem(at: URL(fileURLWithPath: file), to: destination)
                             
@@ -159,7 +158,6 @@ class ViewController: NSViewController, NSWindowDelegate {
                             debugPrint("Failed to copy extracted file \(file): \(error.localizedDescription)")
                             showCopyError(text: error.localizedDescription)
                         }
-                        pendingOperations -= 1;
                     }
                 }
             }
