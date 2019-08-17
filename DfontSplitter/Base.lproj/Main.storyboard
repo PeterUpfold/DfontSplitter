@@ -872,7 +872,6 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <pathCell key="cell" controlSize="small" selectable="YES" editable="YES" alignment="left" pathStyle="popUp" id="oFC-k2-Xiq">
                                                 <font key="font" metaFont="smallSystem"/>
-                                                <url key="url" string="file:///Users/"/>
                                                 <allowedTypes>
                                                     <string>public.folder</string>
                                                 </allowedTypes>

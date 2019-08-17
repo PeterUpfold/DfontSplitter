@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.developer-tools</string>
 	<key>LSMinimumSystemVersion</key>
@@ -28,13 +28,13 @@
 	<string>Copyright © 2018-19 Peter Upfold. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>
 	<string>Main</string>
-	<key>SUUpdateEDKey</key>
-	<string>CuLW2Sd+bQnOi0ah7QeOOvl0tkXOshCoy27H9ktVRjU=</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>SUFeedURL</key>
 	<string>https://apps.upfold.org.uk/appupdate/dfontsplitter.xml</string>
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
+	<key>SUUpdateEDKey</key>
+	<string>CuLW2Sd+bQnOi0ah7QeOOvl0tkXOshCoy27H9ktVRjU=</string>
 </dict>
 </plist>

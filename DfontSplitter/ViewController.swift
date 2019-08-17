@@ -35,6 +35,7 @@ class ViewController: NSViewController, NSWindowDelegate {
         // Do any additional setup after loading the view.
         //pathControl.stringValue = FileManager.default.homeDirectoryForCurrentUser.absoluteString // sandboxing makes this path ugly and not the home folder :(
         
+        
     }
     
     func windowWillClose(_ notification: Notification) {
@@ -66,6 +67,15 @@ class ViewController: NSViewController, NSWindowDelegate {
     
     @IBAction func convertButton(_ sender: Any) {
         
+        if pathControl.stringValue.count < 1 {
+            let alert = NSAlert()
+            alert.messageText = "Please choose a destination folder."
+            alert.informativeText = "Please choose a destination folder where DfontSplitter will save the converted files."
+            alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: nil)
+            cleanTempFolder()
+            return
+        }
+    
 
         for file in arrayController!.arrangedObjects as! [NSString] {
             debugPrint(file)
@@ -97,6 +107,7 @@ class ViewController: NSViewController, NSWindowDelegate {
                 alert.messageText = "Unable to determine the type of file “\(file)”."
                 alert.informativeText = "DfontSplitter could not determine the type of this file, so does not understand how to convert it."
                 alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: nil)
+                cleanTempFolder()
                 return
             }
 
@@ -140,6 +151,7 @@ class ViewController: NSViewController, NSWindowDelegate {
                 debugPrint("\(error.localizedDescription)")
             }
             
+            cleanTempFolder()
             
         }
     }
@@ -151,6 +163,19 @@ class ViewController: NSViewController, NSWindowDelegate {
         alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: nil)
     }
     
+    func cleanTempFolder() -> Void {
+        let enumerator = FileManager.default.enumerator(atPath: NSTemporaryDirectory())
+        
+        while let file = enumerator?.nextObject() as? String {
+            debugPrint("clean \(URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(file))")
+            do {
+                try FileManager.default.removeItem(at: URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(file))
+            }
+            catch {
+                debugPrint("failed to remove \(URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(file))")
+            }
+        }
+    }
     
     func maybeOverwriteFileWithPrompt(question: String, text: String, file: URL, destination: URL) -> Void {
         let alert = NSAlert()
@@ -222,8 +247,14 @@ class ViewController: NSViewController, NSWindowDelegate {
     }
     
     @IBAction func removeFromSourceFonts(_ sender: Any) {
-        debugPrint(" \(arrayController!.selectionIndex)")
+        debugPrint("remove at \(arrayController!.selectionIndex)")
         arrayController.remove(atArrangedObjectIndex: arrayController!.selectionIndex)
+        
+        /* debug */
+        /*for file in arrayController!.arrangedObjects as! [NSString] {
+            debugPrint("found \(file) in arrayController objects after remove")
+        }*/
+        
     }
 }
 
