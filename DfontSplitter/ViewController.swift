@@ -28,6 +28,8 @@ import Cocoa
 
 class ViewController: NSViewController, NSWindowDelegate {
     
+    // remaining file operations. Once back to 0, we can clean the temp dir
+    var pendingOperations : Int = 0
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +37,10 @@ class ViewController: NSViewController, NSWindowDelegate {
         // Do any additional setup after loading the view.
         //pathControl.stringValue = FileManager.default.homeDirectoryForCurrentUser.absoluteString // sandboxing makes this path ugly and not the home folder :(
         
-        
     }
     
     func windowWillClose(_ notification: Notification) {
+        cleanTempFolder()
         NSApplication.shared.terminate(self)
     }
     
@@ -107,7 +109,6 @@ class ViewController: NSViewController, NSWindowDelegate {
                 alert.messageText = "Unable to determine the type of file “\(file)”."
                 alert.informativeText = "DfontSplitter could not determine the type of this file, so does not understand how to convert it."
                 alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: nil)
-                cleanTempFolder()
                 return
             }
 
@@ -125,6 +126,7 @@ class ViewController: NSViewController, NSWindowDelegate {
                     
                     // does destination exist?
                     if FileManager.default.fileExists(atPath: destination.path) {
+                        pendingOperations += 1;
                         maybeOverwriteFileWithPrompt(
                             question: "“\(destination.path)” already exists. Do you want to replace it?", text: "A file that will be extracted has the same name as a file that already exists in the destination folder. Replacing it will overwrite its current contents.",
                             file: URL(fileURLWithPath: file),
@@ -151,9 +153,16 @@ class ViewController: NSViewController, NSWindowDelegate {
                 debugPrint("\(error.localizedDescription)")
             }
             
-            cleanTempFolder()
-            
         }
+        
+        DispatchQueue.global(qos: .background).async {
+            // wait for pending operations to complete before clearing temp folder
+            while (self.pendingOperations > 0) {
+                //TODO this seems inefficient to spin here, although it is only while the user replies to replace/cancel
+            }
+            self.cleanTempFolder()
+        }
+        
     }
     
     func showCopyError(text: String) -> Void {
@@ -203,6 +212,9 @@ class ViewController: NSViewController, NSWindowDelegate {
                     self.showCopyError(text: error.localizedDescription)
                 }
             }
+            
+            self.pendingOperations -= 1;
+            
             }}())
         
         
