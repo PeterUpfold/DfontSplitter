@@ -29,7 +29,15 @@ import Cocoa
 class ViewController: NSViewController, NSWindowDelegate {
     
     // remaining file operations. Once back to 0, we can clean the temp dir
-    var pendingOperations : Int = 0
+    var pendingOperations : Int = 0 {
+        didSet {
+                if pendingOperations == 0 {
+                    DispatchQueue.global(qos: .background).async {
+                    self.cleanTempFolder()
+                }
+            }
+        }
+    }
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +57,11 @@ class ViewController: NSViewController, NSWindowDelegate {
         self.view.window?.delegate = self
         self.view.window?.title = "DfontSplitter"
         self.view.window?.representedURL = nil
+        
+        if UserDefaults.standard.object(forKey: "OpenFinderWindowAfterConvert") == nil {
+            UserDefaults.standard.set(true, forKey: "OpenFinderWindowAfterConvert")
+        }
+        
     }
 
     override var representedObject: Any? {
@@ -126,13 +139,13 @@ class ViewController: NSViewController, NSWindowDelegate {
                     
                     // does destination exist?
                     if FileManager.default.fileExists(atPath: destination.path) {
-                        pendingOperations += 1;
                         maybeOverwriteFileWithPrompt(
                             question: "“\(destination.path)” already exists. Do you want to replace it?", text: "A file that will be extracted has the same name as a file that already exists in the destination folder. Replacing it will overwrite its current contents.",
                             file: URL(fileURLWithPath: file),
                             destination: destination)
                     }
                     else {
+                        pendingOperations += 1;
                         do {
                             try FileManager.default.copyItem(at: URL(fileURLWithPath: file), to: destination)
                             
@@ -146,6 +159,7 @@ class ViewController: NSViewController, NSWindowDelegate {
                             debugPrint("Failed to copy extracted file \(file): \(error.localizedDescription)")
                             showCopyError(text: error.localizedDescription)
                         }
+                        pendingOperations -= 1;
                     }
                 }
             }
@@ -153,14 +167,6 @@ class ViewController: NSViewController, NSWindowDelegate {
                 debugPrint("\(error.localizedDescription)")
             }
             
-        }
-        
-        DispatchQueue.global(qos: .background).async {
-            // wait for pending operations to complete before clearing temp folder
-            while (self.pendingOperations > 0) {
-                //TODO this seems inefficient to spin here, although it is only while the user replies to replace/cancel
-            }
-            self.cleanTempFolder()
         }
         
     }
@@ -173,6 +179,9 @@ class ViewController: NSViewController, NSWindowDelegate {
     }
     
     func cleanTempFolder() -> Void {
+        
+        debugPrint("Cleaning temp folder")
+        
         let enumerator = FileManager.default.enumerator(atPath: NSTemporaryDirectory())
         
         while let file = enumerator?.nextObject() as? String {
@@ -187,6 +196,7 @@ class ViewController: NSViewController, NSWindowDelegate {
     }
     
     func maybeOverwriteFileWithPrompt(question: String, text: String, file: URL, destination: URL) -> Void {
+        pendingOperations += 1;
         let alert = NSAlert()
         alert.messageText = question
         alert.informativeText = text
