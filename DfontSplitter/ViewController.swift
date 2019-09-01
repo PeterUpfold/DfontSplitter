@@ -29,7 +29,7 @@ import Cocoa
 class ViewController: NSViewController, NSWindowDelegate {
     
     // remaining file operations. Once back to 0, we can clean the temp dir
-    var pendingOperations : Int = 0 {
+    /*var pendingOperations : Int = 0 {
         didSet {
                 if pendingOperations == 0 {
                     DispatchQueue.global(qos: .background).async {
@@ -37,7 +37,7 @@ class ViewController: NSViewController, NSWindowDelegate {
                 }
             }
         }
-    }
+    }*/
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,6 +90,16 @@ class ViewController: NSViewController, NSWindowDelegate {
             cleanTempFolder()
             return
         }
+        
+        var tempUrl = URL(fileURLWithPath: NSTemporaryDirectory())
+        do {
+            tempUrl = try createTempFolderForConvertSession()
+        }
+        catch {
+            debugPrint("Failed to create temporary folder: \(error.localizedDescription)")
+            showCopyError(text: error.localizedDescription)
+            return
+        }
     
 
         for file in arrayController!.arrangedObjects as! [NSString] {
@@ -100,7 +110,7 @@ class ViewController: NSViewController, NSWindowDelegate {
             let unsafePointerOfFilename = file.utf8String
             let unsafeMutablePointerOfFilename: UnsafeMutablePointer<Int8> = UnsafeMutablePointer<Int8>(mutating: unsafePointerOfFilename!)
             
-            FileManager.default.changeCurrentDirectoryPath(NSTemporaryDirectory())
+            FileManager.default.changeCurrentDirectoryPath(tempUrl.path)
             debugPrint("temp dir is \(FileManager.default.currentDirectoryPath)")
             
             let fileURL = URL(fileURLWithPath: String(file))
@@ -193,8 +203,14 @@ class ViewController: NSViewController, NSWindowDelegate {
         }
     }
     
+    func createTempFolderForConvertSession() throws -> URL {
+        let url = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(UUID())")
+        try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true, attributes: nil)
+        return url
+    }
+    
     func maybeOverwriteFileWithPrompt(question: String, text: String, file: URL, destination: URL) -> Void {
-        pendingOperations += 1;
+        //pendingOperations += 1;
         let alert = NSAlert()
         alert.messageText = question
         alert.informativeText = text
@@ -221,7 +237,7 @@ class ViewController: NSViewController, NSWindowDelegate {
                 }
             }
             
-            self.pendingOperations -= 1;
+            //self.pendingOperations -= 1;
             
             }}())
         
