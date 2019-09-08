@@ -24,7 +24,7 @@
 
 
 import Cocoa
-
+import os
 
 class ViewController: NSViewController, NSWindowDelegate {
     
@@ -96,7 +96,7 @@ class ViewController: NSViewController, NSWindowDelegate {
             tempUrl = try createTempFolderForConvertSession()
         }
         catch {
-            debugPrint("Failed to create temporary folder: \(error.localizedDescription)")
+            os_log("Failed to create temporary folder: %{public}s", error.localizedDescription)
             showCopyError(text: error.localizedDescription)
             return
         }
@@ -111,7 +111,7 @@ class ViewController: NSViewController, NSWindowDelegate {
             let unsafeMutablePointerOfFilename: UnsafeMutablePointer<Int8> = UnsafeMutablePointer<Int8>(mutating: unsafePointerOfFilename!)
             
             FileManager.default.changeCurrentDirectoryPath(tempUrl.path)
-            debugPrint("temp dir is \(FileManager.default.currentDirectoryPath)")
+            os_log("temp dir is %s", FileManager.default.currentDirectoryPath)
             
             let fileURL = URL(fileURLWithPath: String(file))
             
@@ -119,12 +119,12 @@ class ViewController: NSViewController, NSWindowDelegate {
                 let returnValue = fondu_main_simple(unsafeMutablePointerOfFilename)
                 // here we get the bool result of FindResourceFile, so '1' is success
                 
-                debugPrint("fondu returned \(returnValue)")
+                os_log("fondu returned %d", returnValue)
             }
             else if (fileIsTTC(file: fileURL)) {
                 let returnValue = handlefile(unsafeMutablePointerOfFilename)
                 
-                debugPrint("stripttc returned \(returnValue)")
+                os_log("stripttc returned %d", returnValue)
        
             }
             else {
@@ -137,7 +137,7 @@ class ViewController: NSViewController, NSWindowDelegate {
 
             
             // get file(s) from temp directory and move to target directory
-            debugPrint("destination dir is \(pathControl.stringValue)")
+            os_log("destination dir is %s", pathControl.stringValue)
             
           
             
@@ -159,20 +159,20 @@ class ViewController: NSViewController, NSWindowDelegate {
                             try FileManager.default.copyItem(at: URL(fileURLWithPath: file), to: destination)
                             
                             if (UserDefaults.standard.bool(forKey: "OpenFinderWindowAfterConvert")) {
-                                debugPrint("Will spawn Finder at \(pathControl.stringValue)")
+                                os_log("Will spawn Finder at %s", pathControl.stringValue)
                                 NSWorkspace.shared.selectFile(destination.path, inFileViewerRootedAtPath: pathControl.stringValue)
                             }
                             
                         }
                         catch {
-                            debugPrint("Failed to copy extracted file \(file): \(error.localizedDescription)")
+                            os_log("Failed to copy extracted file %s: %{public}s", file, error.localizedDescription)
                             showCopyError(text: error.localizedDescription)
                         }
                     }
                 }
             }
             catch {
-                debugPrint("\(error.localizedDescription)")
+                os_log("%{public}s", error.localizedDescription)
             }
             
         }
@@ -188,17 +188,17 @@ class ViewController: NSViewController, NSWindowDelegate {
     
     func cleanTempFolder() -> Void {
         
-        debugPrint("Cleaning temp folder")
+        os_log("Cleaning temp folder")
         
         let enumerator = FileManager.default.enumerator(atPath: NSTemporaryDirectory())
         
         while let file = enumerator?.nextObject() as? String {
-            debugPrint("clean \(URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(file))")
+            os_log("clean %s", URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(file).absoluteString)
             do {
                 try FileManager.default.removeItem(at: URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(file))
             }
             catch {
-                debugPrint("failed to remove \(URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(file))")
+                os_log("failed to remove %s", URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(file).absoluteString)
             }
         }
     }
@@ -220,7 +220,7 @@ class ViewController: NSViewController, NSWindowDelegate {
         
         alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: {{ (response) in
             if (response == NSApplication.ModalResponse.alertFirstButtonReturn) {
-                debugPrint("Will overwrite \(file) as requested")
+                os_log("Will overwrite %s as requested", file.absoluteString)
                 
                 
                 do {
@@ -232,7 +232,7 @@ class ViewController: NSViewController, NSWindowDelegate {
                     }
                 }
                 catch {
-                    debugPrint("Failed to copy file \(file): \(error.localizedDescription)")
+                    os_log("Failed to copy file %s %{public}s", file.absoluteString, error.localizedDescription)
                     self.showCopyError(text: error.localizedDescription)
                 }
             }
@@ -283,7 +283,7 @@ class ViewController: NSViewController, NSWindowDelegate {
     }
     
     @IBAction func removeFromSourceFonts(_ sender: Any) {
-        debugPrint("remove at \(arrayController!.selectionIndex)")
+        os_log("remove at %d", arrayController!.selectionIndex)
         arrayController.remove(atArrangedObjectIndex: arrayController!.selectionIndex)
         
         /* debug */
