@@ -21,6 +21,7 @@
 		D09306D622039FB400D939E6 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09306D522039FB400D939E6 /* CoreServices.framework */; };
 		D09306D822039FC200D939E6 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09306D722039FC200D939E6 /* Carbon.framework */; };
 		D09306DA2203A6D100D939E6 /* DragDropTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09306D92203A6D100D939E6 /* DragDropTableView.swift */; };
+		D09E7974232591A500519916 /* DfontSplitterFileManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09E7973232591A500519916 /* DfontSplitterFileManagerDelegate.swift */; };
 		D0DDA4A422C8828E00A113B7 /* stripttc.h in Headers */ = {isa = PBXBuildFile; fileRef = D0DDA4A222C8828E00A113B7 /* stripttc.h */; };
 		D0DDA4A522C8828E00A113B7 /* stripttc.c in Sources */ = {isa = PBXBuildFile; fileRef = D0DDA4A322C8828E00A113B7 /* stripttc.c */; };
 		D0DDA4A922C88AF700A113B7 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D0DDA4A822C88AF600A113B7 /* Podfile */; };
@@ -130,6 +131,7 @@
 		D09306D522039FB400D939E6 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		D09306D722039FC200D939E6 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		D09306D92203A6D100D939E6 /* DragDropTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDropTableView.swift; sourceTree = "<group>"; };
+		D09E7973232591A500519916 /* DfontSplitterFileManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DfontSplitterFileManagerDelegate.swift; sourceTree = "<group>"; };
 		D0CBE25D22AE99E0F157535A /* Pods_DfontSplitterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DfontSplitterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0DDA4A222C8828E00A113B7 /* stripttc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stripttc.h; sourceTree = "<group>"; };
 		D0DDA4A322C8828E00A113B7 /* stripttc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = stripttc.c; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 				D087A559219567B4003C24DA /* DfontSplitter.entitlements */,
 				D09306D92203A6D100D939E6 /* DragDropTableView.swift */,
 				D0FA4ECC22C91A9D00FCC02B /* PreferencesWindowController.swift */,
+				D09E7973232591A500519916 /* DfontSplitterFileManagerDelegate.swift */,
 			);
 			path = DfontSplitter;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				D0FA4ECD22C91A9D00FCC02B /* PreferencesWindowController.swift in Sources */,
 				D0035566228049DF00159AD6 /* readnfnt.c in Sources */,
 				D09306DA2203A6D100D939E6 /* DragDropTableView.swift in Sources */,
+				D09E7974232591A500519916 /* DfontSplitterFileManagerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

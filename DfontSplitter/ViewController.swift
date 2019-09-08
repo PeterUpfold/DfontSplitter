@@ -47,6 +47,9 @@ class ViewController: NSViewController, NSWindowDelegate {
         
     }
     
+    let fileManager = FileManager()
+    let fileManagerDelegate = DfontSplitterFileManagerDelegate()
+    
     func windowWillClose(_ notification: Notification) {
         cleanTempFolder()
         NSApplication.shared.terminate(self)
@@ -57,6 +60,8 @@ class ViewController: NSViewController, NSWindowDelegate {
         self.view.window?.delegate = self
         self.view.window?.title = "DfontSplitter"
         self.view.window?.representedURL = nil
+        
+        fileManager.delegate = fileManagerDelegate
         
         if UserDefaults.standard.object(forKey: "OpenFinderWindowAfterConvert") == nil {
             UserDefaults.standard.set(true, forKey: "OpenFinderWindowAfterConvert")
@@ -87,7 +92,30 @@ class ViewController: NSViewController, NSWindowDelegate {
             alert.messageText = "Please choose a destination folder."
             alert.informativeText = "Please choose a destination folder where DfontSplitter will save the converted files."
             alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: nil)
-            cleanTempFolder()
+            return
+        }
+        
+        let destinationFolderURL = URL(fileURLWithPath: pathControl.stringValue)
+
+        // check folder exists
+        if let value = try? destinationFolderURL.resourceValues(forKeys: [.isDirectoryKey]) {
+            if value.isDirectory! {
+                os_log("Destination folder exists at “%s”", destinationFolderURL.absoluteString)
+            }
+            else {
+                os_log("Destination folder is not of the directory type at “%s”", destinationFolderURL.absoluteString)
+                let alert = NSAlert()
+                alert.messageText = "Please choose a destination folder."
+                alert.informativeText = "You must choose a destination for the converted files that is a folder."
+                alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: nil)
+                return
+            }
+        } else {
+            os_log("Destination folder no longer exists at “%s”", destinationFolderURL.absoluteString)
+            let alert = NSAlert()
+            alert.messageText = "Please choose a destination folder."
+            alert.informativeText = "The destination folder you chose no longer exists. Please choose another folder where DfontSplitter will save the converted files."
+            alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: nil)
             return
         }
         
@@ -110,8 +138,8 @@ class ViewController: NSViewController, NSWindowDelegate {
             let unsafePointerOfFilename = file.utf8String
             let unsafeMutablePointerOfFilename: UnsafeMutablePointer<Int8> = UnsafeMutablePointer<Int8>(mutating: unsafePointerOfFilename!)
             
-            FileManager.default.changeCurrentDirectoryPath(tempUrl.path)
-            os_log("temp dir is %s", FileManager.default.currentDirectoryPath)
+            fileManager.changeCurrentDirectoryPath(tempUrl.path)
+            os_log("temp dir is %s", fileManager.currentDirectoryPath)
             
             let fileURL = URL(fileURLWithPath: String(file))
             
@@ -137,18 +165,18 @@ class ViewController: NSViewController, NSWindowDelegate {
 
             
             // get file(s) from temp directory and move to target directory
-            os_log("destination dir is %s", pathControl.stringValue)
+            os_log("destination dir is %s", destinationFolderURL.absoluteString)
             
           
             
             do {
-                for file in try FileManager.default.contentsOfDirectory(atPath: FileManager.default.currentDirectoryPath) {
+                for file in try fileManager.contentsOfDirectory(atPath: fileManager.currentDirectoryPath) {
                   
                     // construct destination URL
-                    let destination = URL(fileURLWithPath: pathControl.stringValue).appendingPathComponent(file)
+                    let destination = destinationFolderURL.appendingPathComponent(file)
                     
                     // does destination exist?
-                    if FileManager.default.fileExists(atPath: destination.path) {
+                    if fileManager.fileExists(atPath: destination.path) {
                         maybeOverwriteFileWithPrompt(
                             question: "“\(destination.path)” already exists. Do you want to replace it?", text: "A file that will be extracted has the same name as a file that already exists in the destination folder. Replacing it will overwrite its current contents.",
                             file: URL(fileURLWithPath: file),
@@ -156,11 +184,11 @@ class ViewController: NSViewController, NSWindowDelegate {
                     }
                     else {
                         do {
-                            try FileManager.default.copyItem(at: URL(fileURLWithPath: file), to: destination)
+                            try fileManager.copyItem(at: URL(fileURLWithPath: file), to: destination)
                             
                             if (UserDefaults.standard.bool(forKey: "OpenFinderWindowAfterConvert")) {
-                                os_log("Will spawn Finder at %s", pathControl.stringValue)
-                                NSWorkspace.shared.selectFile(destination.path, inFileViewerRootedAtPath: pathControl.stringValue)
+                                os_log("Will spawn Finder at %s", destinationFolderURL.absoluteString)
+                                NSWorkspace.shared.selectFile(destination.path, inFileViewerRootedAtPath: destinationFolderURL.path)
                             }
                             
                         }
@@ -190,12 +218,12 @@ class ViewController: NSViewController, NSWindowDelegate {
         
         os_log("Cleaning temp folder")
         
-        let enumerator = FileManager.default.enumerator(atPath: NSTemporaryDirectory())
+        let enumerator = fileManager.enumerator(atPath: NSTemporaryDirectory())
         
         while let file = enumerator?.nextObject() as? String {
             os_log("clean %s", URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(file).absoluteString)
             do {
-                try FileManager.default.removeItem(at: URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(file))
+                try fileManager.removeItem(at: URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(file))
             }
             catch {
                 os_log("failed to remove %s", URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(file).absoluteString)
@@ -205,7 +233,7 @@ class ViewController: NSViewController, NSWindowDelegate {
     
     func createTempFolderForConvertSession() throws -> URL {
         let url = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(UUID())")
-        try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true, attributes: nil)
+        try fileManager.createDirectory(at: url, withIntermediateDirectories: true, attributes: nil)
         return url
     }
     
@@ -224,8 +252,8 @@ class ViewController: NSViewController, NSWindowDelegate {
                 
                 
                 do {
-                    try FileManager.default.removeItem(atPath: destination.path)
-                    try FileManager.default.copyItem(at: URL(resolvingAliasFileAt: file), to: destination)
+                    try self.fileManager.removeItem(atPath: destination.path)
+                    try self.fileManager.copyItem(at: URL(resolvingAliasFileAt: file), to: destination)
                     
                     if (UserDefaults.standard.bool(forKey: "OpenFinderWindowAfterConvert")) {
                         NSWorkspace.shared.selectFile(destination.path, inFileViewerRootedAtPath: destination.path)
