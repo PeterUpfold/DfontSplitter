@@ -23,6 +23,7 @@
  */
 
 import Cocoa
+import os
 
 class DragDropTableView: NSTableView {
 
@@ -37,14 +38,14 @@ class DragDropTableView: NSTableView {
     }
     
     override func awakeFromNib() {
-        debugPrint("Registering for dragged types")
+        os_log("Registering for dragged types")
         registerForDraggedTypes([NSPasteboard.PasteboardType.fileURL])
     }
     
     override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
         // if no delegate connected, no dragging is supported
         if (delegate == nil) {
-            debugPrint("No delegate connected for dragging")
+            os_log("No delegate connected for dragging")
             return []
         }
         
