@@ -92,26 +92,26 @@ class ViewController: NSViewController, NSWindowDelegate {
         
         // check destination folder
 
-        var isDir:ObjCBool = false
-        
-        if !FileManager.default.fileExists(atPath: pathControl.stringValue, isDirectory: &isDir) {
-            // does not exist
-            os_log("“%s” does not exist as a destination folder.", pathControl.stringValue)
-            let alert = NSAlert()
-            alert.messageText = "Please choose a destination folder."
-            alert.informativeText = "The chosen destination folder no longer exists."
-            alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: nil)
-            return
-        }
-        if !isDir.boolValue {
-            // not folder
-            os_log("“%s” as a destination folder is not valid because it is not a folder.", pathControl.stringValue)
-            let alert = NSAlert()
-            alert.messageText = "Please choose a destination folder."
-            alert.informativeText = "The chosen destination must be a folder."
-            alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: nil)
-            return
-        }
+//        var isDir:ObjCBool = false
+//
+//        if !FileManager.default.fileExists(atPath: pathControl.stringValue, isDirectory: &isDir) {
+//            // does not exist
+//            os_log("“%s” does not exist as a destination folder.", pathControl.stringValue)
+//            let alert = NSAlert()
+//            alert.messageText = "Please choose a destination folder."
+//            alert.informativeText = "The chosen destination folder no longer exists."
+//            alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: nil)
+//            return
+//        }
+//        if !isDir.boolValue {
+//            // not folder
+//            os_log("“%s” as a destination folder is not valid because it is not a folder.", pathControl.stringValue)
+//            let alert = NSAlert()
+//            alert.messageText = "Please choose a destination folder."
+//            alert.informativeText = "The chosen destination must be a folder."
+//            alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: nil)
+//            return
+//        }
         
         var tempUrl = URL(fileURLWithPath: NSTemporaryDirectory())
         do {
