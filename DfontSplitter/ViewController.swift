@@ -159,7 +159,7 @@ class ViewController: NSViewController, NSWindowDelegate {
 
             
             // get file(s) from temp directory and move to target directory
-            os_log("destination dir is %s", pathControl.stringValue)
+            os_log("destination dir is %s", pathControl.url!.absoluteString)
             
           
             
@@ -167,7 +167,7 @@ class ViewController: NSViewController, NSWindowDelegate {
                 for file in try FileManager.default.contentsOfDirectory(atPath: FileManager.default.currentDirectoryPath) {
                   
                     // construct destination URL
-                    let destination = URL(fileURLWithPath: pathControl.stringValue).appendingPathComponent(file)
+                    let destination = pathControl.url!.appendingPathComponent(file)
                     
                     // does destination exist?
                     if FileManager.default.fileExists(atPath: destination.path) {
@@ -181,8 +181,8 @@ class ViewController: NSViewController, NSWindowDelegate {
                             try FileManager.default.copyItem(at: URL(fileURLWithPath: file), to: destination)
                             
                             if (UserDefaults.standard.bool(forKey: "OpenFinderWindowAfterConvert")) {
-                                os_log("Will spawn Finder at %s", pathControl.stringValue)
-                                NSWorkspace.shared.selectFile(destination.path, inFileViewerRootedAtPath: pathControl.stringValue)
+                                os_log("Will spawn Finder at %s", pathControl.url!.absoluteString)
+                                NSWorkspace.shared.selectFile(destination.path, inFileViewerRootedAtPath: pathControl.url!.path)
                             }
                             
                         }
