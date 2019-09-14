@@ -42,9 +42,8 @@ class ViewController: NSViewController, NSWindowDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        //pathControl.stringValue = FileManager.default.homeDirectoryForCurrentUser.absoluteString // sandboxing makes this path ugly and not the home folder :(
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(addFileToSourceFonts(_:)), name: Notification.Name("FileOpenPressed"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(convertButton(_:)), name: Notification.Name("FileConvertPressed"), object: nil)
     }
     
     func windowWillClose(_ notification: Notification) {

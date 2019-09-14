@@ -54,5 +54,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
     }
     
+    @IBAction func fileOpen(_ sender: Any) {
+        NotificationCenter.default.post(name: Notification.Name("FileOpenPressed"), object: nil)
+    }
+    
+    @IBAction func fileConvert(_ sender: Any) {
+        NotificationCenter.default.post(name: Notification.Name("FileConvertPressed"), object: nil)
+    }
+    
 }
 
