@@ -2,6 +2,8 @@
 //  stripttc.c
 //  DfontSplitter
 //
+// Copyright © 2000 – 2015, George Williams and the FontForge Project contributors
+//
 // This file is originally from FontForge. <https://github.com/fontforge/fontforge> and is licensed
 // under the GNU General Public License, version 3.
 //

@@ -28,6 +28,8 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     var preferencesWindowController: NSWindowController?
+    
+    var acknowledgementsWindowController: NSWindowController?
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -52,6 +54,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             preferencesWindowController!.showWindow(sender)
         }
         
+    }
+    
+    @IBAction func openAcknowledgements(_ sender: Any) {
+        if (acknowledgementsWindowController == nil) {
+            let storyboard = NSStoryboard(name: "Acknowledgements", bundle: nil)
+            acknowledgementsWindowController = storyboard.instantiateController(withIdentifier: "Acknowledgements") as? NSWindowController
+        }
+        
+        if (acknowledgementsWindowController != nil) {
+            acknowledgementsWindowController!.showWindow(sender)
+        }
     }
     
     @IBAction func fileOpen(_ sender: Any) {
