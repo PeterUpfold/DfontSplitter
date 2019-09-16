@@ -3,7 +3,7 @@ DfontSplitter
 
 DfontSplitter allows you to convert Mac format fonts (dfont, Font Suitcase, TTC) into TTF files.
 
-You can use DfontSplitter for OS X 10.6 Snow Leopard and later to convert OS X’s dfont format files, Font Suitcase files and TrueType Collection (TTC) files into TrueType fonts (.ttf) that can be more easily used across platforms. DfontSplitter is free of charge, and open source under the GNU General Public License v3.
+You can use DfontSplitter to convert OS X’s dfont format files, Font Suitcase files and TrueType Collection (TTC) files into TrueType fonts (.ttf) that can be more easily used across platforms. DfontSplitter is free of charge, and open source under the GNU General Public License v3.
 
 ![DfontSplitter screenshot](https://raw.githubusercontent.com/PeterUpfold/DfontSplitter/master/DfontSplitter/mas-screenshot.png)
 
