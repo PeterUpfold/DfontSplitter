@@ -3,7 +3,7 @@
 //  DfontSplitter
 //
 //  Created by Peter Upfold on 31/01/2019.
-//  Copyright © 2019 Peter Upfold. All rights reserved.
+//  Copyright © 2019-20 Peter Upfold. All rights reserved.
 //
 /*
  This file is part of DfontSplitter.

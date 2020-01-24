@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -39,20 +40,20 @@
                                 <rect key="frame" x="20" y="54" width="605" height="270"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="LQy-00-aQE">
-                                    <rect key="frame" x="0.0" y="0.0" width="605" height="270"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="590" height="270"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView ambiguous="YES" editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" findStyle="bar" spellingCorrection="YES" smartInsertDelete="YES" id="SOJ-qV-0vR">
-                                            <rect key="frame" x="0.0" y="0.0" width="605" height="959"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="590" height="959"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="605" height="270"/>
+                                            <size key="minSize" width="590" height="270"/>
                                             <size key="maxSize" width="625" height="10000000"/>
                                             <attributedString key="textStorage">
                                                 <fragment>
                                                     <mutableString key="content">DfontSplitter
-Copyright (C) 2018-19 Peter Upfold.
+Copyright (C) 2018-20 Peter Upfold.
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3 of the License.
 
@@ -92,7 +93,7 @@ The icon includes a modified version of “Chisel wood 24mm” by Isabelle Grosj
 </mutableString>
                                                     <attributes>
                                                         <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                        <font key="NSFont" metaFont="cellTitle"/>
+                                                        <font key="NSFont" metaFont="label" size="12"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -106,7 +107,7 @@ The icon includes a modified version of “Chisel wood 24mm” by Isabelle Grosj
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="taO-zj-E9G">
-                                    <rect key="frame" x="589" y="0.0" width="16" height="270"/>
+                                    <rect key="frame" x="590" y="0.0" width="15" height="270"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
