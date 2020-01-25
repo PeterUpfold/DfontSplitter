@@ -151,9 +151,10 @@ static void ProcessNestedPS( char *fontname, char *origfilename, PSFONT *psfont 
     if ( filename!=NULL && *filename!='\0' ) {
 	char *dirend = strrchr(origfilename,'/');
 	if ( dirend!=NULL ) {
-	    char *newfn = malloc(strlen(filename)+strlen(origfilename)+1);
-	    strcpy(newfn,origfilename);
-	    strcpy(newfn + (dirend-origfilename)+1, filename);
+        size_t newfnlen = strlen(filename)+strlen(origfilename)+1;
+	    char *newfn = malloc(newfnlen);
+	    strncpy(newfn,origfilename, newfnlen);
+	    strncpy(newfn + (dirend-origfilename)+1, filename, strlen(filename)); /* we know we have malloced at least filename long?? */
 	    free(filename);
 	    filename = newfn;
 	}
