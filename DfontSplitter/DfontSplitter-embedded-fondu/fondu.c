@@ -1200,7 +1200,7 @@ return( true );
 	    dpt = spt+6;
 	*dpt++ = '~';
 	*dpt++ = '1';
-	strcpy(dpt,exten);
+	strncpy(dpt,exten,8);
     }
 return( IsResourceInFile(buffer,NULL));
 }
