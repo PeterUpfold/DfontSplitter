@@ -38,19 +38,35 @@
 int tolatin1 = false;
 static int force = false, inquire = false, doafm = false, trackps = false, show=false;
 
+void debugFtell(FILE* f) {
+    fprintf(stderr, "file position: %ld\n", ftell(f));
+}
+
 int getushort(FILE *f) {
+#if DEBUG
+    debugFtell(f);
+#endif
     int ch1 = getc(f);
     int ch2 = getc(f);
+#if DEBUG
+    debugFtell(f);
+#endif
     if ( ch2==EOF )
 return( EOF );
 return( (ch1<<8)|ch2 );
 }
 
 long getlong(FILE *f) {
+#if DEBUG
+    debugFtell(f);
+#endif
     int ch1 = getc(f);
     int ch2 = getc(f);
     int ch3 = getc(f);
     int ch4 = getc(f);
+#if DEBUG
+    debugFtell(f);
+#endif
     if ( ch4==EOF )
 return( EOF );
 return( (ch1<<24)|(ch2<<16)|(ch3<<8)|ch4 );
@@ -786,6 +802,7 @@ static void SearchTtfResources(FILE *f,long rlistpos,int subcnt,long rdata_pos,
 	roff = rdata_pos+((ch1<<16)|(ch2<<8)|getc(f));
 	/* mbz = */ getlong(f);
 	here = ftell(f);
+        fprintf(stderr, "here: %ld", here);
 	if ( rname!=-1 ) {
 	    fseek(f,name_list+rname,SEEK_SET);
 	    ch1 = getc(f);

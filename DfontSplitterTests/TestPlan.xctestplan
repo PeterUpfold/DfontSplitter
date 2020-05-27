@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "E8E9EDD5-4564-4ED5-80D6-722CD622A815",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:DfontSplitter.xcodeproj",
+        "identifier" : "D087A55D219567B4003C24DA",
+        "name" : "DfontSplitterTests"
+      }
+    }
+  ],
+  "version" : 1
+}
