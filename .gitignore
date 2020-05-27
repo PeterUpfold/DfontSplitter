@@ -12,6 +12,7 @@ Makefile
 notarized/
 
 DfontSplitterTests/NonRedistTests.swift
+SampleFiles/Non-Redistributable
 # tests on files that cannot be in open source tree
 
 *.swp
