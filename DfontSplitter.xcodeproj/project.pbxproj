@@ -20,6 +20,7 @@
 		D09306D822039FC200D939E6 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09306D722039FC200D939E6 /* Carbon.framework */; };
 		D09306DA2203A6D100D939E6 /* DragDropTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09306D92203A6D100D939E6 /* DragDropTableView.swift */; };
 		D0A19E69247EE86400B8464C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A19E68247EE86400B8464C /* Utils.swift */; };
+		D0A19E6C247EF46600B8464C /* NonRedistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A19E6B247EF46600B8464C /* NonRedistTests.swift */; };
 		D0A32D5D232F4B050037A067 /* Acknowledgements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A32D5C232F4B050037A067 /* Acknowledgements.storyboard */; };
 		D0A32D5F232F4E0A0037A067 /* AcknowledgementsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A32D5E232F4E0A0037A067 /* AcknowledgementsWindowController.swift */; };
 		D0A32D61232F52120037A067 /* AcknowledgementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A32D60232F52120037A067 /* AcknowledgementsViewController.swift */; };
@@ -124,6 +125,7 @@
 		D09306D92203A6D100D939E6 /* DragDropTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDropTableView.swift; sourceTree = "<group>"; };
 		D0A19E67247EE3EF00B8464C /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
 		D0A19E68247EE86400B8464C /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		D0A19E6B247EF46600B8464C /* NonRedistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonRedistTests.swift; sourceTree = "<group>"; };
 		D0A32D5C232F4B050037A067 /* Acknowledgements.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Acknowledgements.storyboard; sourceTree = "<group>"; };
 		D0A32D5E232F4E0A0037A067 /* AcknowledgementsWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsWindowController.swift; sourceTree = "<group>"; };
 		D0A32D60232F52120037A067 /* AcknowledgementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsViewController.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				D0A19E67247EE3EF00B8464C /* TestPlan.xctestplan */,
 				D087A564219567B4003C24DA /* Info.plist */,
 				D0A19E68247EE86400B8464C /* Utils.swift */,
+				D0A19E6B247EF46600B8464C /* NonRedistTests.swift */,
 			);
 			path = DfontSplitterTests;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 			files = (
 				D087A563219567B4003C24DA /* DfontSplitterTests.swift in Sources */,
 				D0A19E69247EE86400B8464C /* Utils.swift in Sources */,
+				D0A19E6C247EF46600B8464C /* NonRedistTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

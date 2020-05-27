@@ -11,6 +11,9 @@ Makefile
 
 notarized/
 
+DfontSplitterTests/NonRedistTests.swift
+# tests on files that cannot be in open source tree
+
 *.swp
 
 # From: https://github.com/github/gitignore/blob/master/Swift.gitignore
