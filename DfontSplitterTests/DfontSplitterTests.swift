@@ -68,5 +68,9 @@ class DfontSplitterTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    /*func testAssertionForFileExt() {
+        runFonduOnRelativePath(path: "SampleFiles/test.df", currentURL: currentURL)
+    }*/
 
 }
