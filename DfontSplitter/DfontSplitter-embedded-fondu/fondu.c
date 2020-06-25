@@ -65,10 +65,10 @@ long getlong(FILE *f) {
 #if DEBUG
     debugFtell(f);
 #endif
-    int ch1 = getc(f);
-    int ch2 = getc(f);
-    int ch3 = getc(f);
-    int ch4 = getc(f);
+    long ch1 = getc(f);
+    long ch2 = getc(f);
+    long ch3 = getc(f);
+    long ch4 = getc(f);
 #if DEBUG
     debugFtell(f);
 #endif
@@ -788,6 +788,7 @@ return( true );
 
 static void ttfnameset(FILE *ttf,char *curname,char *patheticattempt) {
     char buffer[1024];
+    memset(buffer, 0, 1024);
 
     if ( !ttfnamefixup(ttf,buffer, 1024))
 	strlcpy(buffer,patheticattempt, 1024);
