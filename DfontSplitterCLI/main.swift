@@ -25,6 +25,7 @@
 import Foundation
 import DfontSplitter
 import CommonCrypto
+import os
 
 func runFonduOnRelativePath(path: String, currentURL: URL) -> Int {
     let file = currentURL.appendingPathComponent(path).path
@@ -38,6 +39,7 @@ func runFonduOnRelativePath(path: String, currentURL: URL) -> Int {
 
 let arguments = CommandLine.arguments
 
-runFonduOnRelativePath(path: arguments[1], currentURL: URL(fileURLWithPath: FileManager.default.currentDirectoryPath))
+NSLog("Extracting \(arguments[1]) to \(URL(fileURLWithPath: FileManager.default.currentDirectoryPath))")
 
-
+let result = runFonduOnRelativePath(path: arguments[1], currentURL: URL(fileURLWithPath: FileManager.default.currentDirectoryPath))
+NSLog("Result of runFonduOnRelativePath is \(result)")
