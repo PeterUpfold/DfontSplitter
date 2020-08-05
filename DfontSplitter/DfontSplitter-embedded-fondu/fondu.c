@@ -528,7 +528,7 @@ static FOND *BuildFondList(FILE *f,long rlistpos,int subcnt,long rdata_pos,
 		if ( k!=-1 || stringoffsets[j]==0 )
 	    continue;		/* this style doesn't exist */
 		format = stringoffsets[j]-1;
-		strlen = strings[0][0];
+		strlen = strings[0][0]; // PU: heads up -- uses strlen from file?
 		if ( format!=0 && format!=-1 )
 		    for ( k=0; k<strings[format][0]; ++k )
 			strlen += strings[ strings[format][k+1]-1 ][0];
@@ -538,8 +538,9 @@ static FOND *BuildFondList(FILE *f,long rlistpos,int subcnt,long rdata_pos,
 		pt += strings[ 0 ][0];
 		if ( format!=0 && format!=-1 )
 		    for ( k=0; k<strings[format][0]; ++k ) {
-			strlcpy(pt,strings[ strings[format][k+1]-1 ]+1, strlen+1);
-			pt += strings[ strings[format][k+1]-1 ][0];
+                // PU: the pt string doesn't appear to be used anywhere
+			//strlcpy(pt,strings[ strings[format][k+1]-1 ]+1, strlen+1);
+			//pt += strings[ strings[format][k+1]-1 ][0];
 		    }
 		*pt = '\0';
 	    }
@@ -693,7 +694,7 @@ return;
 
 static int ttfnamefixup(FILE *ttf,char *buffer, size_t buffer_size) {
     int version, isotf=false;
-    int i,num, nameoffset, stringoffset;
+    int i,num, nameoffset = 0, stringoffset;
     int fullval, famval, fullstr, famstr, fulllen, famlen, val, tag;
     int plat, spec, lang, name, len, off, ch;
     char *pt;
