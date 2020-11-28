@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -529,7 +529,7 @@
 				};
 			};
 			buildConfigurationList = D087A547219567B2003C24DA /* Build configuration list for PBXProject "DfontSplitter" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -947,6 +947,7 @@
 				CODE_SIGN_ENTITLEMENTS = DfontSplitter/DfontSplitter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = 4P6R7ZH883;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = DfontSplitter/Info.plist;
@@ -970,6 +971,7 @@
 				CODE_SIGN_ENTITLEMENTS = DfontSplitter/DfontSplitter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = 4P6R7ZH883;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = DfontSplitter/Info.plist;
