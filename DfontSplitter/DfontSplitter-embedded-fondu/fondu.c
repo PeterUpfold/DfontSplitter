@@ -984,12 +984,12 @@ return( true );
 #ifndef OldMacintosh
 	/* OS/X and linux with appropriate drivers */
 static int HasResourceFork(char *filename,PSFONT *psfont) {
-    char *respath = malloc(strlen(filename)+strlen("/rsrc")+1);
+    char *respath = malloc(strlen(filename)+strlen("/..namedfork/rsrc")+1);
     FILE *temp;
     int ret=false;
 
     strcpy(respath,filename);
-    strcat(respath,"/rsrc");
+    strcat(respath,"/..namedfork/rsrc");
     temp = fopen(respath,"r");
     free(respath);
     if ( temp!=NULL ) {
