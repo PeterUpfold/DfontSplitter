@@ -15,7 +15,7 @@
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "chisel_32-1.png",
+      "filename" : "chisel_32.png",
       "scale" : "1x"
     },
     {
@@ -39,7 +39,7 @@
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "chisel_256-1.png",
+      "filename" : "chisel_256.png",
       "scale" : "1x"
     },
     {
@@ -51,7 +51,7 @@
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "chisel_512-1.png",
+      "filename" : "chisel_512.png",
       "scale" : "1x"
     },
     {
