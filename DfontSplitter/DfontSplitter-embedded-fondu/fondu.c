@@ -1176,9 +1176,7 @@ static int IsResourceInFile(char *filename,PSFONT *psfont) {
     FILE *f;
     char *spt, *pt;
     int ret;
-    
-    size_t filename_length = strlen(filename);
-
+	
     f = fopen(filename,"r");
     if ( f==NULL )
 return( false );
