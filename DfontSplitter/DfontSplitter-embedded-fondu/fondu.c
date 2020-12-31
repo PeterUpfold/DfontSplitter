@@ -1186,27 +1186,28 @@ return( false );
     size_t spt_length = strlen(spt);
     
     pt = strrchr(spt,'.');
-    
-    // determine relative dot position = pt - spt
-    // if spt_length is less than relative dot position + 3, we will step out of bounds
-    assert(spt_length > (pt - spt) + 4);
-    
-    /* BIN checking */
-    if ( pt!=NULL && (pt[1]=='b' || pt[1]=='B') && (pt[2]=='i' || pt[2]=='I') &&
-	    (pt[3]=='n' || pt[3]=='N') && pt[4]=='\0' ) {
-	if ( IsResourceInBinary(f,filename,psfont)) {
-	    fclose(f);
-return( true );
-	}
-        /* HQX checking */
-    } else if ( pt!=NULL && (pt[1]=='h' || pt[1]=='H') && (pt[2]=='q' || pt[2]=='Q') &&
-	    (pt[3]=='x' || pt[3]=='X') && pt[4]=='\0' ) {
-	if ( IsResourceInHex(f,filename,psfont)) {
-	    fclose(f);
-return( true );
-	}
-    }
+	if ( pt!=NULL ) {
+		// determine relative dot position = pt - spt
+		// if spt_length is less than relative dot position + 3, we will step out of bounds
+		assert(spt_length > (pt - spt) + 4);
 
+		/* BIN checking */
+		if ( pt!=NULL && (pt[1]=='b' || pt[1]=='B') && (pt[2]=='i' || pt[2]=='I') &&
+			(pt[3]=='n' || pt[3]=='N') && pt[4]=='\0' ) {
+			if ( IsResourceInBinary(f,filename,psfont)) {
+				fclose(f);
+				return( true );
+			}
+			/* HQX checking */
+		} else if ( pt!=NULL && (pt[1]=='h' || pt[1]=='H') && (pt[2]=='q' || pt[2]=='Q') &&
+				   (pt[3]=='x' || pt[3]=='X') && pt[4]=='\0' ) {
+			if ( IsResourceInHex(f,filename,psfont)) {
+				fclose(f);
+				return( true );
+			}
+		}
+	}
+	
     ret = IsResourceFork(f,0,filename,psfont);
     fclose(f);
     if ( !ret )
