@@ -1,0 +1,12 @@
+
+/* Class = "NSWindow"; ibExternalAccessibilityDescription = "Preferences"; ObjectID = "2Nt-YU-shn"; */
+"2Nt-YU-shn.ibExternalAccessibilityDescription" = "Preferences";
+
+/* Class = "NSWindow"; title = "Preferences"; ObjectID = "2Nt-YU-shn"; */
+"2Nt-YU-shn.title" = "Preferences";
+
+/* Class = "NSButtonCell"; title = "Open a Finder window when conversion is complete"; ObjectID = "3l0-Jj-oKq"; */
+"3l0-Jj-oKq.title" = "Open a Finder window when conversion is complete";
+
+/* Class = "NSViewController"; title = "Preferences"; ObjectID = "4bZ-Uh-fP1"; */
+"4bZ-Uh-fP1.title" = "Preferences";
