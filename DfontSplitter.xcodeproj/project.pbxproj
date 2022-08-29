@@ -947,7 +947,7 @@
 				CODE_SIGN_ENTITLEMENTS = DfontSplitter/DfontSplitter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = 4P6R7ZH883;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = DfontSplitter/Info.plist;
@@ -956,7 +956,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.org.upfold.DfontSplitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DfontSplitter/DfontSplitter-embedded-fondu-Bridging-Header.h";
@@ -972,7 +972,7 @@
 				CODE_SIGN_ENTITLEMENTS = DfontSplitter/DfontSplitter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = 4P6R7ZH883;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = DfontSplitter/Info.plist;
@@ -981,7 +981,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.org.upfold.DfontSplitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DfontSplitter/DfontSplitter-embedded-fondu-Bridging-Header.h";

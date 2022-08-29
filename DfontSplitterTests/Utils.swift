@@ -22,6 +22,8 @@ func runFonduOnRelativePath(path: String, currentURL: URL) -> Int {
 func getSHA256Hash(url: URL) -> NSData {
     let data = FileManager.default.contents(atPath: url.path)
     
+    // if this fails, make sure the SampleFiles/ directory has been copied to
+    // ~/Library/Containers/uk.org.upfold.DfontSplitter/Data/SampleFiles
     let bytes = [UInt8](data!)
     
     var hash = [UInt8](repeating: 0, count: Int(CC_SHA256_DIGEST_LENGTH))
