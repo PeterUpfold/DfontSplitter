@@ -1,4 +1,3 @@
-
 /* Class = "NSWindow"; ibExternalAccessibilityDescription = "Preferences"; ObjectID = "2Nt-YU-shn"; */
 "2Nt-YU-shn.ibExternalAccessibilityDescription" = "Preferences";
 
@@ -10,3 +9,4 @@
 
 /* Class = "NSViewController"; title = "Preferences"; ObjectID = "4bZ-Uh-fP1"; */
 "4bZ-Uh-fP1.title" = "Preferences";
+

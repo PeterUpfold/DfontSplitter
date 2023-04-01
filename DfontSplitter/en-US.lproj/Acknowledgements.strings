@@ -1,12 +1,12 @@
-
 /* Class = "NSTextFieldCell"; title = "DfontSplitter is licensed under the GNU General Public License, version 3."; ObjectID = "1Y0-tg-U5q"; */
 "1Y0-tg-U5q.title" = "DfontSplitter is licensed under the GNU General Public License, version 3.";
 
-/* Class = "NSButtonCell"; title = "View Licence"; ObjectID = "Eac-94-Zyw"; */
-"Eac-94-Zyw.title" = "View Licence";
-
 /* Class = "NSWindow"; title = "Licence & Acknowledgements"; ObjectID = "c4D-Q3-s6c"; */
-"c4D-Q3-s6c.title" = "Licence & Acknowledgements";
+"c4D-Q3-s6c.title" = "License & Acknowledgements";
+
+/* Class = "NSButtonCell"; title = "View Licence"; ObjectID = "Eac-94-Zyw"; */
+"Eac-94-Zyw.title" = "View License";
 
 /* Class = "NSButtonCell"; title = "Get Source Code"; ObjectID = "wZO-Cz-LED"; */
 "wZO-Cz-LED.title" = "Get Source Code";
+
