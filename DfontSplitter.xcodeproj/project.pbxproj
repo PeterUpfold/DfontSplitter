@@ -89,6 +89,12 @@
 /* Begin PBXFileReference section */
 		2D621D1FB683FCD5B91C654C /* Pods_DfontSplitterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DfontSplitterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		362AC96289C0162E3B69918E /* Pods-DfontSplitter-embedded-fondu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DfontSplitter-embedded-fondu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DfontSplitter-embedded-fondu/Pods-DfontSplitter-embedded-fondu.debug.xcconfig"; sourceTree = "<group>"; };
+		704B170429D8BEF0001FCB44 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Preferences.strings"; sourceTree = "<group>"; };
+		704B170529D8BEF0001FCB44 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Main.strings"; sourceTree = "<group>"; };
+		704B170629D8BEF0001FCB44 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Acknowledgements.strings"; sourceTree = "<group>"; };
+		704B170729D8BF01001FCB44 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/Preferences.strings"; sourceTree = "<group>"; };
+		704B170829D8BF01001FCB44 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/Main.strings"; sourceTree = "<group>"; };
+		704B170929D8BF01001FCB44 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/Acknowledgements.strings"; sourceTree = "<group>"; };
 		70D70ED728BCFFC7000880F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Preferences.storyboard; sourceTree = "<group>"; };
 		70D70EDA28BCFFCC000880F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Preferences.strings; sourceTree = "<group>"; };
 		70D70EDC28BCFFFB000880F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Acknowledgements.storyboard; sourceTree = "<group>"; };
@@ -542,6 +548,8 @@
 				en,
 				Base,
 				ja,
+				"en-GB",
+				"en-US",
 			);
 			mainGroup = D087A543219567B2003C24DA;
 			productRefGroup = D087A54D219567B2003C24DA /* Products */;
@@ -756,6 +764,8 @@
 				70D70ED728BCFFC7000880F5 /* Base */,
 				70D70EDA28BCFFCC000880F5 /* en */,
 				70D70EE028BD001C000880F5 /* ja */,
+				704B170429D8BEF0001FCB44 /* en-GB */,
+				704B170729D8BF01001FCB44 /* en-US */,
 			);
 			name = Preferences.storyboard;
 			sourceTree = "<group>";
@@ -766,6 +776,8 @@
 				70D70EDC28BCFFFB000880F5 /* Base */,
 				70D70EDF28BCFFFF000880F5 /* en */,
 				70D70EE228BD001C000880F5 /* ja */,
+				704B170629D8BEF0001FCB44 /* en-GB */,
+				704B170929D8BF01001FCB44 /* en-US */,
 			);
 			name = Acknowledgements.storyboard;
 			sourceTree = "<group>";
@@ -776,6 +788,8 @@
 				D087A556219567B4003C24DA /* Base */,
 				70D70EE128BD001C000880F5 /* ja */,
 				70D70EE428BD0022000880F5 /* en */,
+				704B170529D8BEF0001FCB44 /* en-GB */,
+				704B170829D8BF01001FCB44 /* en-US */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
