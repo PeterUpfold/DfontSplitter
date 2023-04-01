@@ -51,7 +51,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D087A568219567B4003C24DA"
+               BlueprintIdentifier = "D07E39DF24CDA3E2009D4341"
                BuildableName = "DfontSplitterUITests.xctest"
                BlueprintName = "DfontSplitterUITests"
                ReferencedContainer = "container:DfontSplitter.xcodeproj">
@@ -66,12 +66,14 @@
       enableAddressSanitizer = "YES"
       enableASanStackUseAfterReturn = "YES"
       enableUBSanitizer = "YES"
+      language = "ja"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
-      allowLocationSimulation = "YES">
+      allowLocationSimulation = "YES"
+      showNonLocalizedStrings = "YES">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference

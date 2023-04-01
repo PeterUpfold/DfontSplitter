@@ -3,7 +3,7 @@
 //  DfontSplitterTests
 //
 //  Created by Peter Upfold on 09/11/2018.
-//  Copyright © 2018 Peter Upfold. All rights reserved.
+//  Copyright © 2018-2023 Peter Upfold. All rights reserved.
 //
 
 import XCTest

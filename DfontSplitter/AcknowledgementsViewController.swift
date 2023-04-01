@@ -3,7 +3,7 @@
 //  DfontSplitter
 //
 //  Created by Peter Upfold on 16/09/2019.
-//  Copyright © 2019 Peter Upfold. All rights reserved.
+//  Copyright © 2019-2023 Peter Upfold. All rights reserved.
 //
 
 import Cocoa

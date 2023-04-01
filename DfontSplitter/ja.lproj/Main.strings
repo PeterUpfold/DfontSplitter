@@ -1,36 +1,36 @@
 
 /* Class = "NSMenuItem"; title = "Customize Toolbar…"; ObjectID = "1UK-8n-QPP"; */
-"1UK-8n-QPP.title" = "Customeize Toolbar…";
+"1UK-8n-QPP.title" = "[自動]ツールバーのカスタマイズ";
 
 /* Class = "NSMenuItem"; title = "DfontSplitter"; ObjectID = "1Xt-HY-uBw"; */
 "1Xt-HY-uBw.title" = "DfontSplitter";
 
 /* Class = "NSMenu"; title = "Find"; ObjectID = "1b7-l0-nxx"; */
-"1b7-l0-nxx.title" = "Find";
+"1b7-l0-nxx.title" = "[自動]見付ける";
 
 /* Class = "NSMenuItem"; title = "Transformations"; ObjectID = "2oI-Rn-ZJC"; */
-"2oI-Rn-ZJC.title" = "Transformations";
+"2oI-Rn-ZJC.title" = "[自動]変換";
 
 /* Class = "NSMenu"; title = "Spelling"; ObjectID = "3IN-sU-3Bg"; */
-"3IN-sU-3Bg.title" = "Spelling";
+"3IN-sU-3Bg.title" = "[自動]スペリング";
 
 /* Class = "NSMenu"; title = "Speech"; ObjectID = "3rS-ZA-NoH"; */
-"3rS-ZA-NoH.title" = "Speech";
+"3rS-ZA-NoH.title" = "[自動]演説";
 
 /* Class = "NSMenuItem"; title = "Find"; ObjectID = "4EN-yA-p0u"; */
-"4EN-yA-p0u.title" = "Find";
+"4EN-yA-p0u.title" = "[自動]見付ける";
 
 /* Class = "NSMenuItem"; title = "Enter Full Screen"; ObjectID = "4J7-dP-txa"; */
-"4J7-dP-txa.title" = "Enter Full Screen";
+"4J7-dP-txa.title" = "[自動]全画面表示に入る";
 
 /* Class = "NSMenuItem"; title = "Quit DfontSplitter"; ObjectID = "4sb-4s-VLi"; */
-"4sb-4s-VLi.title" = "Quit DfontSplitter";
+"4sb-4s-VLi.title" = "[自動]DfontSplitterを終了する";
 
 /* Class = "NSMenuItem"; title = "Edit"; ObjectID = "5QF-Oa-p0T"; */
-"5QF-Oa-p0T.title" = "Edit";
+"5QF-Oa-p0T.title" = "[自動]編集";
 
 /* Class = "NSMenuItem"; title = "About DfontSplitter"; ObjectID = "5kV-Vb-QxS"; */
-"5kV-Vb-QxS.title" = "About DfontSplitter";
+"5kV-Vb-QxS.title" = "[自動]に関しては DfontSplitter";
 
 /* Class = "NSMenuItem"; title = "Redo"; ObjectID = "6dh-zS-Vam"; */
 "6dh-zS-Vam.title" = "Redo";
@@ -69,7 +69,7 @@
 "HyV-fh-RgO.title" = "View";
 
 /* Class = "NSTextFieldCell"; title = "DfontSplitter can extract TrueType TTF font files from Dfont, TTC and Font Suitcase archives."; ObjectID = "I3U-eR-1Ek"; */
-"I3U-eR-1Ek.title" = "DfontSplitter can indeed extract TrueType TTF font files from Dfont, TTC and Font Suitcase archives.";
+"I3U-eR-1Ek.title" = "[自動]DfontSplitter は、Dfont、TTC、および Font Suitcase アーカイブから TrueType TTF フォントファイルを抽出できます。";
 
 /* Class = "NSMenuItem"; title = "Open…"; ObjectID = "IAo-SY-fd9"; */
 "IAo-SY-fd9.title" = "Open…";
@@ -114,7 +114,7 @@
 "S0p-oC-mLd.title" = "Jump to Selection";
 
 /* Class = "NSTextFieldCell"; title = "Drag a folder here, or click to choose."; ObjectID = "SGI-7d-4pZ"; */
-"SGI-7d-4pZ.title" = "Drag a folder here, or click to choose.";
+"SGI-7d-4pZ.title" = "[自動]ここにフォルダをドラッグするか、クリックして選択します。";
 
 /* Class = "NSMenu"; title = "Window"; ObjectID = "Td7-aD-5lo"; */
 "Td7-aD-5lo.title" = "Window";
@@ -138,7 +138,7 @@
 "YD8-3N-gR1.placeholderString" = "Status";
 
 /* Class = "NSTextFieldCell"; title = "⚠️ Do not convert files from untrusted sources."; ObjectID = "YD8-3N-gR1"; */
-"YD8-3N-gR1.title" = "⚠️ Do not convert files from untrusted sources.";
+"YD8-3N-gR1.title" = "[auto] ⚠️ 信頼できないソースからのファイルを変換しないでください。";
 
 /* Class = "NSMenuItem"; title = "Find and Replace…"; ObjectID = "YEy-JH-Tfz"; */
 "YEy-JH-Tfz.title" = "Find and Replace…";
@@ -150,7 +150,7 @@
 "aUF-d1-5bR.title" = "Window";
 
 /* Class = "NSBox"; title = "Destination Folder"; ObjectID = "bhk-ri-N9y"; */
-"bhk-ri-N9y.title" = "Destination Folder";
+"bhk-ri-N9y.title" = "[自動]保存先フォルダ";
 
 /* Class = "NSMenu"; title = "File"; ObjectID = "bib-Uj-vzu"; */
 "bib-Uj-vzu.title" = "File";
@@ -174,7 +174,7 @@
 "dRJ-4n-Yzg.title" = "Undo";
 
 /* Class = "NSTextFieldCell"; title = "Click the Add button, or drag .dfont, TTC or Font Suitcase files into the list."; ObjectID = "dX0-M7-4UY"; */
-"dX0-M7-4UY.title" = "Click the Add button, or drag .dfont, TTC or Font Suitcase files into the list.";
+"dX0-M7-4UY.title" = "[自動][追加] ボタンをクリックするか、.dfont、TTC、またはフォント スーツケース ファイルをリストにドラッグします。";
 
 /* Class = "NSMenuItem"; title = "Paste"; ObjectID = "gVA-U4-sdL"; */
 "gVA-U4-sdL.title" = "Paste";

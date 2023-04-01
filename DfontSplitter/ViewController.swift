@@ -3,7 +3,7 @@
 //  DfontSplitter
 //
 //  Created by Peter Upfold on 09/11/2018.
-//  Copyright © 2018-20 Peter Upfold. All rights reserved.
+//  Copyright © 2018-23 Peter Upfold. All rights reserved.
 //
 /*
  This file is part of DfontSplitter.
@@ -83,8 +83,8 @@ class ViewController: NSViewController, NSWindowDelegate {
         
         if pathControl.stringValue.count < 1 {
             let alert = NSAlert()
-            alert.messageText = "Please choose a destination folder."
-            alert.informativeText = "Please choose a destination folder where DfontSplitter will save the converted files."
+            alert.messageText = NSLocalizedString("Please choose a destination folder.", comment: "alert title for if Convert is pressed with no destination folder selected")
+            alert.informativeText = NSLocalizedString("Please choose a destination folder where DfontSplitter will save the converted files.", comment: "alert window detail for if Convert is pressed with no destination folder selected")
             alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: nil)
             return
         }
@@ -150,8 +150,8 @@ class ViewController: NSViewController, NSWindowDelegate {
             }
             else {
                 let alert = NSAlert()
-                alert.messageText = "Unable to determine the type of file “\(file)”."
-                alert.informativeText = "DfontSplitter could not determine the type of this file, so does not understand how to convert it."
+                alert.messageText = NSLocalizedString("Unable to determine the type of file “\(file)”.", comment: "title for error message if source file is of an unknown type")
+                alert.informativeText = NSLocalizedString("DfontSplitter could not determine the type of this file, so does not understand how to convert it.", comment: "alert box content for if a source file is of an unknown type")
                 alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: nil)
                 return
             }
@@ -171,7 +171,8 @@ class ViewController: NSViewController, NSWindowDelegate {
                     // does destination exist?
                     if FileManager.default.fileExists(atPath: destination.path) {
                         maybeOverwriteFileWithPrompt(
-                            question: "“\(destination.path)” already exists. Do you want to replace it?", text: "A file that will be extracted has the same name as a file that already exists in the destination folder. Replacing it will overwrite its current contents.",
+                            question: String(format: NSLocalizedString("“%@” already exists. Do you want to replace it?", comment:"question for a dialogue box if a destination file already exists"), destination.path),
+                            text: String(format: NSLocalizedString("A file that will be extracted has the same name as a file that already exists in the destination folder. Replacing it will overwrite its current contents.", comment: "explanatory text in dialogue box for overwriting a file")),
                             file: URL(fileURLWithPath: file),
                             destination: destination)
                     }
@@ -202,7 +203,7 @@ class ViewController: NSViewController, NSWindowDelegate {
     
     func showCopyError(text: String) -> Void {
         let alert = NSAlert()
-        alert.messageText = "Unable to copy an extracted file to the destination."
+        alert.messageText = NSLocalizedString("Unable to copy an extracted file to the destination.", comment: "error message when a file cannot be extracted. The default localized error text from the OS is displayed below this line in the dialogue box and does not need separate translation")
         alert.informativeText = text
         alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: nil)
     }
@@ -236,8 +237,8 @@ class ViewController: NSViewController, NSWindowDelegate {
         alert.messageText = question
         alert.informativeText = text
         alert.alertStyle = .warning
-        alert.addButton(withTitle: "Replace")
-        alert.addButton(withTitle: "Cancel")
+        alert.addButton(withTitle: NSLocalizedString("Replace", comment: "button to overwrite an existing file"))
+        alert.addButton(withTitle: NSLocalizedString("Cancel", comment: "button to cancel an overwrite operation"))
         
         alert.beginSheetModal(for: NSApp.mainWindow!, completionHandler: {{ (response) in
             if (response == NSApplication.ModalResponse.alertFirstButtonReturn) {
